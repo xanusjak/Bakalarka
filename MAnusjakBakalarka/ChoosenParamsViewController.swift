@@ -1,21 +1,19 @@
 //
-//  SimulationViewController.swift
+//  ChoosenParamsViewController.swift
 //  MAnusjakBakalarka
 //
-//  Created by Milan Anusjak on 09/10/2017.
+//  Created by Milan Anusjak on 27/10/2017.
 //  Copyright © 2017 Milan Anusjak. All rights reserved.
 //
 
 import UIKit
 
-class SimulationViewController: BaseViewController {
+class ChoosenParamsViewController: BaseViewController {
 
     fileprivate var modelName: String!
     fileprivate var modelDict: [String:Any]!
     
     fileprivate var tableView: ChoosenParamsTableView!
-    
-    fileprivate let graphView = GraphView()
     
     init(modelName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -32,29 +30,17 @@ class SimulationViewController: BaseViewController {
     }
     
     override func setupTitle() {
-        self.title = "Simulation"
+        self.title = "Params"
     }
     
     override func setupLoadView() {
         
         tableView = ChoosenParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
         self.view.addSubview(tableView)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(openGraphs))
-        graphView.addGestureRecognizer(tapGestureRecognizer)
-        self.view.addSubview(graphView)
     }
     
     override func setupConstraints() {
         
-        tableView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
-        tableView.autoPinEdge(.bottom, to: .top, of: graphView, withOffset: 0)
-        
-        graphView.autoSetDimension(.height, toSize: UIScreen.main.bounds.size.height/2.5)
-        graphView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
-    }
-    
-    @objc func openGraphs() {
-        self.navigationController?.pushViewController(GraphViewController(), animated: true)
+        tableView.autoPinEdgesToSuperviewEdges()
     }
 }

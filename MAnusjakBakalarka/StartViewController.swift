@@ -12,10 +12,13 @@ class StartViewController: BaseViewController {
     
     fileprivate var modelsList = Array<String>()
     
-    fileprivate var modelNamePicker: UIPickerView = {
-        var modelNamePicker = UIPickerView()
-        modelNamePicker.isHidden = false
-        return modelNamePicker
+    fileprivate var modelNameLabel: UILabel! = {
+        var label = UILabel()
+        label.isUserInteractionEnabled = true
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.text = "Choose model"
+        return label
     }()
     
     fileprivate var openModelButton: UIButton! = {
@@ -29,7 +32,7 @@ class StartViewController: BaseViewController {
     fileprivate var downloadModelButton: UIButton! = {
         var button = UIButton()
         button.setTitle("Download Model", for: .normal)
-//        button.addTarget(self, action: #selector(openMatlabModel), for: .touchUpInside)
+        //        button.addTarget(self, action: #selector(openMatlabModel), for: .touchUpInside) //TODO: download model from cloud
         button.backgroundColor = UIColor.customBlueColor()
         return button
     }()
@@ -42,7 +45,6 @@ class StartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.checkMatlabStatus()
-//        print(MatlabService.sharedClient.getModels())
     }
     
     override func setupTitle() {
@@ -51,9 +53,9 @@ class StartViewController: BaseViewController {
     
     override func setupLoadView() {
         
-        modelNamePicker.delegate = self
-        view.addSubview(modelNamePicker)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: UIBarButtonItemStyle.done, target: self, action: #selector(openSettings))
         
+        view.addSubview(modelNameLabel)
         view.addSubview(openModelButton)
         view.addSubview(downloadModelButton)
         view.addSubview(startCloseButton)
@@ -63,8 +65,14 @@ class StartViewController: BaseViewController {
 
         if MatlabService.sharedClient.isMatlabRuning() {
             
+            //TODO: If model is open
+            if (MatlabService.sharedClient.isModelOpened(modelName: "vrmaglev")) {
+                self.navigationController?.pushViewController(ModelViewController(modelName: "vrmaglev"), animated: true)
+            }
+            
             modelsList = MatlabService.sharedClient.getModels()
-            modelNamePicker.reloadAllComponents()
+            let tap = UITapGestureRecognizer(target:self, action:#selector(chooseModel))
+            modelNameLabel.addGestureRecognizer(tap)
             
             startCloseButton.setTitle("Stop Matlab", for: .normal)
             startCloseButton.addTarget(self, action: #selector(closeMatlabAdapter), for: .touchUpInside)
@@ -89,10 +97,10 @@ class StartViewController: BaseViewController {
     
     override func setupConstraints() {
         
-        modelNamePicker.autoSetDimension(.height, toSize: 75)
-        modelNamePicker.autoPinEdge(toSuperviewEdge: .left)
-        modelNamePicker.autoPinEdge(toSuperviewEdge: .right)
-        modelNamePicker.autoPinEdge(.bottom, to: .top, of: openModelButton, withOffset: -15)
+        modelNameLabel.autoSetDimension(.height, toSize: 50)
+        modelNameLabel.autoPinEdge(toSuperviewEdge: .left)
+        modelNameLabel.autoPinEdge(toSuperviewEdge: .right)
+        modelNameLabel.autoPinEdge(.bottom, to: .top, of: openModelButton, withOffset: -15)
         
         openModelButton.autoSetDimension(.height, toSize: 50)
         openModelButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
@@ -108,6 +116,25 @@ class StartViewController: BaseViewController {
         startCloseButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
     
+    @objc func openSettings() {
+        self.navigationController?.pushViewController(SettingsViewController(haveConnection: true), animated: true)
+    }
+    
+    @objc func chooseModel() {
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        for enumString in modelsList {
+            let choise = UIAlertAction(title: enumString, style: .default) {
+                _ in
+                self.modelNameLabel.text = enumString
+            }
+            alert.addAction(choise)
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @objc func startMatlabAdapter() {
         
         let alertController = SpinnerAlertViewController(title: " ", message: "Starting...", preferredStyle: .alert)
@@ -117,8 +144,8 @@ class StartViewController: BaseViewController {
             MatlabService.sharedClient.startMatlab()
             DispatchQueue.main.async {
                 alertController.dismiss(animated: true, completion: nil)
-                self.checkMatlabStatus()
             }
+            self.checkMatlabStatus()
         }
     }
     
@@ -128,7 +155,7 @@ class StartViewController: BaseViewController {
         self.present(alertController, animated: true, completion: nil)
         
         DispatchQueue.global(qos: .userInitiated).async {
-            MatlabService.sharedClient.openModel("vrmaglev") //TODO: parse model name
+            MatlabService.sharedClient.openModel("vrmaglev") //TODO: modelNameLabel.text
             DispatchQueue.main.async {
                 alertController.dismiss(animated: true, completion: nil)
                 self.navigationController?.pushViewController(ModelViewController(modelName: "vrmaglev"), animated: true)
@@ -145,28 +172,8 @@ class StartViewController: BaseViewController {
             MatlabService.sharedClient.stopMatlab()
             DispatchQueue.main.async {
                 alertController.dismiss(animated: true, completion: nil)
-                self.checkMatlabStatus()
             }
+            self.checkMatlabStatus()
         }
-    }
-}
-
-
-extension StartViewController: UIPickerViewDelegate {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return modelsList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return modelsList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
     }
 }

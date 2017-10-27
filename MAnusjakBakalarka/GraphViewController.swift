@@ -1,5 +1,5 @@
 //
-//  GraphsViewController.swift
+//  GraphViewController.swift
 //  MAnusjakBakalarka
 //
 //  Created by Milan Anusjak on 24/10/2017.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class GraphsViewController: BaseViewController {
+class GraphViewController: BaseViewController {
 
-    fileprivate let graphsView : GraphsView! = {
-        var view = GraphsView()
+    fileprivate let graphsView : GraphView! = {
+        var view = GraphView()
         return view
     }()
     
@@ -37,7 +37,7 @@ class GraphsViewController: BaseViewController {
     }
     
     override func setupTitle() {
-        self.title = "Graphs"
+        self.title = ""
     }
     
     override func setupLoadView() {
@@ -48,7 +48,7 @@ class GraphsViewController: BaseViewController {
     
     override func setupConstraints() {
         
-        graphsView.autoPinEdgesToSuperviewEdges()
+        graphsView.autoPinEdgesToSuperviewEdges(with: .init(top: 50, left: 10, bottom: 0, right: 10))
         
         backButton.autoPinEdge(toSuperviewEdge: .top)
         backButton.autoPinEdge(toSuperviewEdge: .left)

@@ -17,11 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.setupAppeareance()
         
-//        let navController = UINavigationController(rootViewController: StartViewController())
-        
-        //TEST
-        let navController = UINavigationController(rootViewController: ModelViewController(modelName: "Vrmaglev"))
-        //
+        let navController = UINavigationController(rootViewController: StartViewController())
         
         self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()

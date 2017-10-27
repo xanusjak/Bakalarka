@@ -110,7 +110,7 @@ class SimulationTableViewCell: UITableViewCell {
         
         switcher.autoPinEdgesToSuperviewEdges(with: .init(top: 10, left: 0, bottom: 10, right: 15), excludingEdge: .left)
         
-        label.autoPinEdge(.right, to: .left, of: switcher, withOffset: -20)
+        label.autoPinEdge(.right, to: .left, of: switcher, withOffset: -25)
     }
     
     func setupEnumButton(value: String) {
@@ -128,7 +128,7 @@ class SimulationTableViewCell: UITableViewCell {
     
     @objc func openVolaco() {
         
-        let alert = UIAlertController(title: "Please select", message: "", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         for enumString in enumList {
             let choise = UIAlertAction(title: enumString, style: .default) {
@@ -139,6 +139,7 @@ class SimulationTableViewCell: UITableViewCell {
         }
         
         controller.present(alert, animated: true, completion: nil)
+        //TODO: change param value after editing
     }
 }
 
@@ -146,6 +147,8 @@ extension SimulationTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        //TODO: change param value after editing
         return true
     }
     
@@ -163,25 +166,4 @@ extension SimulationTableViewCell: UITextFieldDelegate {
     }
 }
 
-extension SimulationTableViewCell: UIPickerViewDelegate {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return enumList.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return enumList[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 20
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-    }
-}
+

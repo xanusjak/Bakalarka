@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1407057230AD335DF5310BF7 /* Pods_MAnusjakBakalarka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFB324355C1B05D538F47C2 /* Pods_MAnusjakBakalarka.framework */; };
 		511617D81F828D050036B386 /* SpinnerAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511617D71F828D050036B386 /* SpinnerAlertViewController.swift */; };
 		51519BB11F73D6EA009589FA /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51519BB01F73D6EA009589FA /* Path.swift */; };
 		51519BB41F73DB48009589FA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51519BB31F73DB48009589FA /* Utils.swift */; };
@@ -15,10 +16,9 @@
 		518FF3AA1F8B9AAA00212741 /* ChooseBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */; };
 		518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */; };
 		518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */; };
-		518FF3B01F8D61A000212741 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AF1F8D61A000212741 /* ConfigViewController.swift */; };
+		518FF3B01F8D61A000212741 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AF1F8D61A000212741 /* SettingsViewController.swift */; };
 		519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */; };
-		519D71B01F9754B4000FF75A /* GraphsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AF1F9754B4000FF75A /* GraphsView.swift */; };
-		519D71B21F9F76C3000FF75A /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71B11F9F76C3000FF75A /* GraphsViewController.swift */; };
+		519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71B11F9F76C3000FF75A /* GraphViewController.swift */; };
 		51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9D1971F74207200541580 /* UIColor+Extension.swift */; };
 		51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */; };
 		51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DD1F70F7BE00303C77 /* ViewController.swift */; };
@@ -26,9 +26,11 @@
 		51EDC30A1F70F91E00303C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC3091F70F91E00303C77 /* Main.storyboard */; };
 		51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */; };
 		51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC30F1F70FEB000303C77 /* StartViewController.swift */; };
+		51EE202F1FA3716200A20C07 /* ChoosenParamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */; };
+		51EE20311FA375A700A20C07 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE20301FA375A700A20C07 /* GraphView.swift */; };
+		51EE20331FA376F300A20C07 /* ChoosenParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */; };
 		51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA77E31F8587A90035D701 /* MatlabService.swift */; };
 		51FA77E61F8596A40035D701 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA77E51F8596A40035D701 /* ModelViewController.swift */; };
-		FB8A73FCD772A8B62B61A692 /* libPods-MAnusjakBakalarka.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCF9CE6CC3D51BAC46DE896 /* libPods-MAnusjakBakalarka.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +44,9 @@
 		518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBlockViewController.swift; sourceTree = "<group>"; };
 		518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseParamsViewController.swift; sourceTree = "<group>"; };
 		518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		518FF3AF1F8D61A000212741 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		518FF3AF1F8D61A000212741 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
-		519D71AF1F9754B4000FF75A /* GraphsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsView.swift; sourceTree = "<group>"; };
-		519D71B11F9F76C3000FF75A /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
+		519D71B11F9F76C3000FF75A /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		51C9D1971F74207200541580 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		51EDC2D81F70F7BE00303C77 /* MAnusjakBakalarka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAnusjakBakalarka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,10 +56,13 @@
 		51EDC3091F70F91E00303C77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		51EDC30F1F70FEB000303C77 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenParamsTableView.swift; sourceTree = "<group>"; };
+		51EE20301FA375A700A20C07 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenParamsViewController.swift; sourceTree = "<group>"; };
 		51FA77E31F8587A90035D701 /* MatlabService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabService.swift; sourceTree = "<group>"; };
 		51FA77E51F8596A40035D701 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		5BDA48E135E52D06927D06C9 /* Pods-MAnusjakBakalarka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAnusjakBakalarka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka.debug.xcconfig"; sourceTree = "<group>"; };
-		6CCF9CE6CC3D51BAC46DE896 /* libPods-MAnusjakBakalarka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MAnusjakBakalarka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFB324355C1B05D538F47C2 /* Pods_MAnusjakBakalarka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAnusjakBakalarka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB8A73FCD772A8B62B61A692 /* libPods-MAnusjakBakalarka.a in Frameworks */,
+				1407057230AD335DF5310BF7 /* Pods_MAnusjakBakalarka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,13 +144,14 @@
 			isa = PBXGroup;
 			children = (
 				51FA77E71F8596B20035D701 /* Helppers */,
-				518FF3AF1F8D61A000212741 /* ConfigViewController.swift */,
+				518FF3AF1F8D61A000212741 /* SettingsViewController.swift */,
 				51EDC30F1F70FEB000303C77 /* StartViewController.swift */,
 				51FA77E51F8596A40035D701 /* ModelViewController.swift */,
 				518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */,
 				518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */,
+				51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */,
 				518FF3A71F8B9A4100212741 /* SimulationViewController.swift */,
-				519D71B11F9F76C3000FF75A /* GraphsViewController.swift */,
+				519D71B11F9F76C3000FF75A /* GraphViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -154,8 +159,9 @@
 		51EDC30C1F70F9C900303C77 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				519D71AF1F9754B4000FF75A /* GraphsView.swift */,
 				517F889F1FA09457006DC159 /* BackButton.swift */,
+				51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */,
+				51EE20301FA375A700A20C07 /* GraphView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -173,7 +179,7 @@
 		BE7B2DFEDD022FF1DC37C0B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6CCF9CE6CC3D51BAC46DE896 /* libPods-MAnusjakBakalarka.a */,
+				8EFB324355C1B05D538F47C2 /* Pods_MAnusjakBakalarka.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,9 +262,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableGraphView/ScrollableGraphView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableGraphView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,13 +282,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MAnusjakBakalarka-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		44E275B41C9E4D9429F619C6 /* [CP] Copy Pods Resources */ = {
@@ -303,6 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				517F88A01FA09457006DC159 /* BackButton.swift in Sources */,
+				51EE20331FA376F300A20C07 /* ChoosenParamsViewController.swift in Sources */,
+				51EE202F1FA3716200A20C07 /* ChoosenParamsTableView.swift in Sources */,
 				519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */,
 				51519BB11F73D6EA009589FA /* Path.swift in Sources */,
 				518FF3A81F8B9A4100212741 /* SimulationViewController.swift in Sources */,
@@ -310,13 +326,13 @@
 				51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */,
 				51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */,
 				518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */,
-				519D71B21F9F76C3000FF75A /* GraphsViewController.swift in Sources */,
+				519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */,
 				51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */,
 				518FF3AA1F8B9AAA00212741 /* ChooseBlockViewController.swift in Sources */,
-				518FF3B01F8D61A000212741 /* ConfigViewController.swift in Sources */,
+				518FF3B01F8D61A000212741 /* SettingsViewController.swift in Sources */,
 				51FA77E61F8596A40035D701 /* ModelViewController.swift in Sources */,
 				511617D81F828D050036B386 /* SpinnerAlertViewController.swift in Sources */,
-				519D71B01F9754B4000FF75A /* GraphsView.swift in Sources */,
+				51EE20311FA375A700A20C07 /* GraphView.swift in Sources */,
 				51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */,
 				51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */,
 				51519BB41F73DB48009589FA /* Utils.swift in Sources */,

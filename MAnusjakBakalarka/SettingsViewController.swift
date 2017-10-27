@@ -1,5 +1,5 @@
 //
-//  ConfigViewController.swift
+//  SettingsViewController.swift
 //  MAnusjakBakalarka
 //
 //  Created by Milan Anusjak on 10/10/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConfigViewController: BaseViewController {
+class SettingsViewController: BaseViewController {
 
     fileprivate var isPinging: Bool!
     
@@ -35,13 +35,19 @@ class ConfigViewController: BaseViewController {
         return button
     }()
     
-    init(trueOrFalse: Bool) {
+    init(haveConnection: Bool) {
         super.init(nibName: nil, bundle: nil)
-        self.isPinging = trueOrFalse
+        self.isPinging = haveConnection
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.hidesBackButton = true
     }
     
     override func viewDidLoad() {
@@ -103,7 +109,7 @@ class ConfigViewController: BaseViewController {
 }
 
 
-extension ConfigViewController: UITextFieldDelegate {
+extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         Path.changeIp = self.ipTextField.text!

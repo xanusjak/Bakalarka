@@ -7,115 +7,206 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D6906951B3DEDBEC96AB7FF7298C397 /* Pods-MAnusjakBakalarka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2645C308BB108C16F64FA54D2EEF8E91 /* Pods-MAnusjakBakalarka-dummy.m */; };
-		2FC50AEE5B4FD3FCC20474D33005CB65 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4519EA7A79064A5791C95DFFB0E335F0 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */; };
-		7432CD4B8AB2DBDC853E4A62276A0B7E /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7AB4D62E8FDD6491B561B992722C852F /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A5B9ADE4BB110E641D7FD5F4200DCE4 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8B21170F2728D369EC4E425A840B65C /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A991F974FFCBA9D20E935F8B5BDBE56B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		BD129E88C89D3B4688A9A9F2EFFEDBAA /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BFC6490517077E12456EA66AB7CF5E30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		D03D21D802A77F7910BE95CED3F219C6 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5C79F67836D844649772FD7470B4EE1 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E637D38660521CBD0C539D0937104B62 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E616D2BB73829EFBBC8ABABC7876B6 /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03D13A629342D8A20011D068C92A0110 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C2C28D9E9CF8458E398FC2137539C3 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C052F3D25C3781E57FA5EA2431BDD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		0CB60D632E51ECD2164ABD6978378EF1 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		106CBBB0527FFB5F9C35AF8AAB9419E5 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590D86C52F26CB791544A37A4BFA64B /* FillDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1465A989C3BE9DF63D6242A7F6EC7EC3 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4F7F6D1E1D762BCBB054E53E13C83 /* ReferenceLines.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		150C143A932C68AFF57A44A1DB209B1B /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA0E30C808F6C3105E20820B856FF /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1CA4DEDF9C9246569EB694A44B44E90E /* ScrollableGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BD1C9EF9C460547F127AF93275C486 /* ScrollableGraphView-dummy.m */; };
+		263B09FFCE6BF09177DC5C977F60DDAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		40FFC464B7C184C32571912C87268F1A /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		42D55F88DF54DC0A9512F43262F99D74 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C901112FF46E235775779C9743AB52E /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F7E53DDE24AFB8ADF9A97F269B3BB57 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6C506FFB3E9F40DC3F7014358E943242 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C089452455C3938EBDB57F9B3CA45DD9 /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6DDCD0B31BBF12756E7448E307C4F552 /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6FF3F23BC4B58CDA07AD4245BDEFD2C5 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C23566708FDDFBBC3D97B965804439 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78DBCDF65489FA7084756DF9DA262166 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCF453B92BCCC584A6016B3C93D7F3F /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BF9230254A067BDF552A668F9B89CE5 /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5EB9C19BB36AE15F8A43BB92CA65D /* ScrollableGraphViewDataSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8130ECB9A7F88AA358232408A8528649 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8511CD726AA48E2CC9BCAA19D729BAC3 /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8D47C35CC92F624ECFA789671D87A3CD /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		979D6C2AB8262D3F161D95CC5E209F7B /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1C6D90FD41D856752B35FD6FF1D1544 /* ScrollableGraphView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02EADD424FECAD1D5A6A898ABE139848 /* ScrollableGraphView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACCD63F6381F5D2D421BE13C5533132B /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA652BBB8806EE708AA88697F342B24 /* LinePlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ADA1752D6C808AFD3C997B658276556E /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8CDD784A0141D27211A1208660C6DD /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE9ACF39E296ED9F6D2F9079D5A23657 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F1334878CAAC7AE0635B68D363521 /* ScrollableGraphView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BFB98C5D1109983EC52DBA53EF9B551E /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BFBB154BC354DF4A298B9490F27D4931 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C38F34139F9EAD86DA8F44AB7A21B8B0 /* PureLayout-dummy.m */; };
+		C0D7417B8CEE1C48092CE11F7E6F1EB5 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC23ECBCB981DD5C85EB50402C89767A /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92A5BF51A78929BCDB29AC4869DA2A4 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9B1CBA1C8640EFBA26E5AB9DA28ECBC /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DC090123D1C9A2DD3BF188F858C38B61 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E20929F831E0EC5872AA969CA93F70B8 /* Pods-MAnusjakBakalarka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58920C5895B5FC108A94D83B7695687B /* Pods-MAnusjakBakalarka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAF2195D51443E85D38671B21A5EF123 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCFFD797AE25B8D55BC8DAFE17A17DD /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F402193783A4956ECDB7DC5E2B4BF4A2 /* Pods-MAnusjakBakalarka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E9F942942EFEBF5AC05ADC394E0B7 /* Pods-MAnusjakBakalarka-dummy.m */; };
+		F95A9DE1F55FF3E0C4946CC010C67AE0 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		890BE9957D069A89B54B2831A7B924B0 /* PBXContainerItemProxy */ = {
+		713288BD2FAF7474EE5BFE0699EA32DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F669D56528E6380C6A86F6679DF0839A;
+			remoteGlobalIDString = A553A1D2D43CAA37383593F100F16E29;
 			remoteInfo = PureLayout;
+		};
+		F6B9BD4194756A984DDC6D81EF50700D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE7AA1F3C1DE74030139FE745E842BC4;
+			remoteInfo = ScrollableGraphView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		129832CAED57495522F06699874AB5E0 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
-		1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
-		2645C308BB108C16F64FA54D2EEF8E91 /* Pods-MAnusjakBakalarka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAnusjakBakalarka-dummy.m"; sourceTree = "<group>"; };
-		2ECC2AC2F51174917BD55C057ADE5EB5 /* Pods-MAnusjakBakalarka-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAnusjakBakalarka-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3D8AD4B9E5F14733F622FBF6C05E96DC /* Pods-MAnusjakBakalarka-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAnusjakBakalarka-acknowledgements.plist"; sourceTree = "<group>"; };
-		45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
-		57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
-		5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		719A987FB6A264FFB599CF8A748E48EA /* Pods-MAnusjakBakalarka-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAnusjakBakalarka-resources.sh"; sourceTree = "<group>"; };
-		7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		821A99E37F73166B22B2140902A4F9F9 /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		02EADD424FECAD1D5A6A898ABE139848 /* ScrollableGraphView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-umbrella.h"; sourceTree = "<group>"; };
+		092CC81863CB0139B5967E0D09F5506A /* Pods_MAnusjakBakalarka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAnusjakBakalarka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12242355FB294512BDAE01538FD8AE5A /* Pods-MAnusjakBakalarka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MAnusjakBakalarka.modulemap"; sourceTree = "<group>"; };
+		17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelPool.swift; path = Classes/Reference/LabelPool.swift; sourceTree = "<group>"; };
+		1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingDelegate.swift; path = Classes/Protocols/ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
+		216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientDrawingLayer.swift; path = Classes/Drawing/GradientDrawingLayer.swift; sourceTree = "<group>"; };
+		2D2BC479EEAB13496FE783467926A7F0 /* Pods-MAnusjakBakalarka-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAnusjakBakalarka-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2EA652BBB8806EE708AA88697F342B24 /* LinePlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinePlot.swift; path = Classes/Plots/LinePlot.swift; sourceTree = "<group>"; };
+		37D4F7F6D1E1D762BCBB054E53E13C83 /* ReferenceLines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLines.swift; path = Classes/Reference/ReferenceLines.swift; sourceTree = "<group>"; };
+		3C21410B38FBD051791E0A942A8E8C32 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		42BDA0E30C808F6C3105E20820B856FF /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		46C2C28D9E9CF8458E398FC2137539C3 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		4CCF453B92BCCC584A6016B3C93D7F3F /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		51B5747A93B093873B50BDAA5D5FD13B /* Pods-MAnusjakBakalarka-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAnusjakBakalarka-acknowledgements.plist"; sourceTree = "<group>"; };
+		58920C5895B5FC108A94D83B7695687B /* Pods-MAnusjakBakalarka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAnusjakBakalarka-umbrella.h"; sourceTree = "<group>"; };
+		60C23566708FDDFBBC3D97B965804439 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotPlot.swift; path = Classes/Plots/DotPlot.swift; sourceTree = "<group>"; };
+		6CE217F2FD3306340AA0C8A34066E536 /* ScrollableGraphView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ScrollableGraphView.modulemap; sourceTree = "<group>"; };
+		702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingLayer.swift; path = Classes/Drawing/ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
+		77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPointAnimation.swift; path = Classes/Plots/Animation/GraphPointAnimation.swift; sourceTree = "<group>"; };
+		79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		7E559AA64FE3DB515EF9F32142DABF6B /* Pods-MAnusjakBakalarka-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAnusjakBakalarka-resources.sh"; sourceTree = "<group>"; };
+		7E9C282422C1946791EAB94841DABE1C /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
+		81255B54563C46CEB68CA333FA2FB204 /* Pods-MAnusjakBakalarka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAnusjakBakalarka.debug.xcconfig"; sourceTree = "<group>"; };
+		8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPoint.swift; path = Classes/Plots/Animation/GraphPoint.swift; sourceTree = "<group>"; };
+		87F90AFFE93C1BCE67BFFA2E10B72D09 /* ScrollableGraphView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableGraphView.xcconfig; sourceTree = "<group>"; };
+		91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLineDrawingView.swift; path = Classes/Drawing/ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A48EF27DD5A00DE15959B41C8B4F6A55 /* Pods-MAnusjakBakalarka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAnusjakBakalarka.debug.xcconfig"; sourceTree = "<group>"; };
-		ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
-		BAF7ED89E955F83FCCD66F80448E50D6 /* Pods-MAnusjakBakalarka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAnusjakBakalarka.release.xcconfig"; sourceTree = "<group>"; };
-		BD89E257D4EB99C68075DFC201C25D93 /* libPods-MAnusjakBakalarka.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MAnusjakBakalarka.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2BB0027677D6EBBFC599384F026D708 /* Pods-MAnusjakBakalarka-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAnusjakBakalarka-frameworks.sh"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
-		D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarDrawingLayer.swift; path = Classes/Drawing/BarDrawingLayer.swift; sourceTree = "<group>"; };
+		A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		A0D6B756778FA45A57BA5F1E20053BF8 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrollableGraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2ACEC4EC32CA18DFF944F9F95710F18 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plot.swift; path = Classes/Plots/Plot.swift; sourceTree = "<group>"; };
+		A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotDrawingLayer.swift; path = Classes/Drawing/DotDrawingLayer.swift; sourceTree = "<group>"; };
+		AF04B91BFCB9976420B1C9B8F1600D24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67F1334878CAAC7AE0635B68D363521 /* ScrollableGraphView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphView.swift; path = Classes/ScrollableGraphView.swift; sourceTree = "<group>"; };
+		BE8E9F942942EFEBF5AC05ADC394E0B7 /* Pods-MAnusjakBakalarka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAnusjakBakalarka-dummy.m"; sourceTree = "<group>"; };
+		C089452455C3938EBDB57F9B3CA45DD9 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		C38F34139F9EAD86DA8F44AB7A21B8B0 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
+		CF8CDD784A0141D27211A1208660C6DD /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		D44D5857C006C1560725005627B9E34F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D590D86C52F26CB791544A37A4BFA64B /* FillDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillDrawingLayer.swift; path = Classes/Drawing/FillDrawingLayer.swift; sourceTree = "<group>"; };
+		D6BD1C9EF9C460547F127AF93275C486 /* ScrollableGraphView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScrollableGraphView-dummy.m"; sourceTree = "<group>"; };
+		D8E5EB9C19BB36AE15F8A43BB92CA65D /* ScrollableGraphViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDataSource.swift; path = Classes/Protocols/ScrollableGraphViewDataSource.swift; sourceTree = "<group>"; };
+		DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPlot.swift; path = Classes/Plots/BarPlot.swift; sourceTree = "<group>"; };
+		DBCFFD797AE25B8D55BC8DAFE17A17DD /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineDrawingLayer.swift; path = Classes/Drawing/LineDrawingLayer.swift; sourceTree = "<group>"; };
+		E09B33B11AAD44674A4E7E22A19FCB57 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		EA868B9A2DD061580CB83378D22580E4 /* Pods-MAnusjakBakalarka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAnusjakBakalarka.release.xcconfig"; sourceTree = "<group>"; };
+		EC23ECBCB981DD5C85EB50402C89767A /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
+		EE92C708FE702E28A219919F7330F4DE /* Pods-MAnusjakBakalarka-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAnusjakBakalarka-frameworks.sh"; sourceTree = "<group>"; };
+		F215A74BB1456E16D2A4705DAD4907FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F89E4B592EADA351C3A9125F944A9FDD /* ScrollableGraphView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5AA4002B61D932462EA06F402378387 /* Frameworks */ = {
+		000CA2D772033B50D7AAE54542F30293 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFC6490517077E12456EA66AB7CF5E30 /* Foundation.framework in Frameworks */,
+				263B09FFCE6BF09177DC5C977F60DDAB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4FE35E63C4046AAE0C1DF49C2108093 /* Frameworks */ = {
+		813DCF84250B42D7F69E74CF6EA36888 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A991F974FFCBA9D20E935F8B5BDBE56B /* Foundation.framework in Frameworks */,
+				8130ECB9A7F88AA358232408A8528649 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B335B1137F22DB35A9234643886B3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C052F3D25C3781E57FA5EA2431BDD8C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		49ED264939F73C5CF9D4DF03438F451C /* Products */ = {
+		004AAAA304FFD0C9E3FE981328AD19D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BD89E257D4EB99C68075DFC201C25D93 /* libPods-MAnusjakBakalarka.a */,
-				821A99E37F73166B22B2140902A4F9F9 /* libPureLayout.a */,
+				661F5FB3CBE542D22D6943DAB5872B76 /* PureLayout */,
+				11E5C83815B268F4AA8915EDD204CD95 /* ScrollableGraphView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		11E5C83815B268F4AA8915EDD204CD95 /* ScrollableGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */,
+				DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */,
+				A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */,
+				6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */,
+				D590D86C52F26CB791544A37A4BFA64B /* FillDrawingLayer.swift */,
+				216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */,
+				8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */,
+				77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */,
+				17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */,
+				DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */,
+				2EA652BBB8806EE708AA88697F342B24 /* LinePlot.swift */,
+				A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */,
+				91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */,
+				37D4F7F6D1E1D762BCBB054E53E13C83 /* ReferenceLines.swift */,
+				B67F1334878CAAC7AE0635B68D363521 /* ScrollableGraphView.swift */,
+				D8E5EB9C19BB36AE15F8A43BB92CA65D /* ScrollableGraphViewDataSource.swift */,
+				1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */,
+				702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */,
+				CF6E297FE0E513C3C1B22AD051D6BB88 /* Support Files */,
+			);
+			path = ScrollableGraphView;
+			sourceTree = "<group>";
+		};
+		2927AD3CD1875B49237B3814A56E2579 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				092CC81863CB0139B5967E0D09F5506A /* Pods_MAnusjakBakalarka.framework */,
+				A2ACEC4EC32CA18DFF944F9F95710F18 /* PureLayout.framework */,
+				A0D6B756778FA45A57BA5F1E20053BF8 /* ScrollableGraphView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D31888F357E9A8B889EE235F0683D79 /* Pods-MAnusjakBakalarka */ = {
+		661F5FB3CBE542D22D6943DAB5872B76 /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
-				2ECC2AC2F51174917BD55C057ADE5EB5 /* Pods-MAnusjakBakalarka-acknowledgements.markdown */,
-				3D8AD4B9E5F14733F622FBF6C05E96DC /* Pods-MAnusjakBakalarka-acknowledgements.plist */,
-				2645C308BB108C16F64FA54D2EEF8E91 /* Pods-MAnusjakBakalarka-dummy.m */,
-				C2BB0027677D6EBBFC599384F026D708 /* Pods-MAnusjakBakalarka-frameworks.sh */,
-				719A987FB6A264FFB599CF8A748E48EA /* Pods-MAnusjakBakalarka-resources.sh */,
-				A48EF27DD5A00DE15959B41C8B4F6A55 /* Pods-MAnusjakBakalarka.debug.xcconfig */,
-				BAF7ED89E955F83FCCD66F80448E50D6 /* Pods-MAnusjakBakalarka.release.xcconfig */,
+				60C23566708FDDFBBC3D97B965804439 /* ALView+PureLayout.h */,
+				42BDA0E30C808F6C3105E20820B856FF /* ALView+PureLayout.m */,
+				46C2C28D9E9CF8458E398FC2137539C3 /* NSArray+PureLayout.h */,
+				C089452455C3938EBDB57F9B3CA45DD9 /* NSArray+PureLayout.m */,
+				CF8CDD784A0141D27211A1208660C6DD /* NSLayoutConstraint+PureLayout.h */,
+				79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */,
+				4CCF453B92BCCC584A6016B3C93D7F3F /* PureLayout.h */,
+				DBCFFD797AE25B8D55BC8DAFE17A17DD /* PureLayout+Internal.h */,
+				A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */,
+				B26B5F047664CD3DDF7E9AE07BCFAC5B /* Support Files */,
 			);
-			name = "Pods-MAnusjakBakalarka";
-			path = "Target Support Files/Pods-MAnusjakBakalarka";
-			sourceTree = "<group>";
-		};
-		5F78BEF58EAFB539B6DF553FB8B4ACC1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5D31888F357E9A8B889EE235F0683D79 /* Pods-MAnusjakBakalarka */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
+			path = PureLayout;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -123,82 +214,144 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */,
-				49ED264939F73C5CF9D4DF03438F451C /* Products */,
-				5F78BEF58EAFB539B6DF553FB8B4ACC1 /* Targets Support Files */,
+				004AAAA304FFD0C9E3FE981328AD19D5 /* Pods */,
+				2927AD3CD1875B49237B3814A56E2579 /* Products */,
+				F5DC9FD2E949B123BF3D0984DD15A7EA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83F65399C3808A743CC1392CF12DD692 /* Support Files */ = {
+		9F2B93F5C5936E11F5B0FAB7B24C3560 /* Pods-MAnusjakBakalarka */ = {
 			isa = PBXGroup;
 			children = (
-				1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */,
-				CE0A907C755768715DA7F954CDC61B9E /* PureLayout-dummy.m */,
-				129832CAED57495522F06699874AB5E0 /* PureLayout-prefix.pch */,
+				D44D5857C006C1560725005627B9E34F /* Info.plist */,
+				12242355FB294512BDAE01538FD8AE5A /* Pods-MAnusjakBakalarka.modulemap */,
+				2D2BC479EEAB13496FE783467926A7F0 /* Pods-MAnusjakBakalarka-acknowledgements.markdown */,
+				51B5747A93B093873B50BDAA5D5FD13B /* Pods-MAnusjakBakalarka-acknowledgements.plist */,
+				BE8E9F942942EFEBF5AC05ADC394E0B7 /* Pods-MAnusjakBakalarka-dummy.m */,
+				EE92C708FE702E28A219919F7330F4DE /* Pods-MAnusjakBakalarka-frameworks.sh */,
+				7E559AA64FE3DB515EF9F32142DABF6B /* Pods-MAnusjakBakalarka-resources.sh */,
+				58920C5895B5FC108A94D83B7695687B /* Pods-MAnusjakBakalarka-umbrella.h */,
+				81255B54563C46CEB68CA333FA2FB204 /* Pods-MAnusjakBakalarka.debug.xcconfig */,
+				EA868B9A2DD061580CB83378D22580E4 /* Pods-MAnusjakBakalarka.release.xcconfig */,
+			);
+			name = "Pods-MAnusjakBakalarka";
+			path = "Target Support Files/Pods-MAnusjakBakalarka";
+			sourceTree = "<group>";
+		};
+		B26B5F047664CD3DDF7E9AE07BCFAC5B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F215A74BB1456E16D2A4705DAD4907FE /* Info.plist */,
+				E09B33B11AAD44674A4E7E22A19FCB57 /* PureLayout.modulemap */,
+				7E9C282422C1946791EAB94841DABE1C /* PureLayout.xcconfig */,
+				C38F34139F9EAD86DA8F44AB7A21B8B0 /* PureLayout-dummy.m */,
+				3C21410B38FBD051791E0A942A8E8C32 /* PureLayout-prefix.pch */,
+				EC23ECBCB981DD5C85EB50402C89767A /* PureLayout-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/PureLayout";
 			sourceTree = "<group>";
 		};
-		A2FDD832DA64F35B104DD4C55A31BF8E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AB198DB8875A98298498BA74D26897FE /* PureLayout */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AB198DB8875A98298498BA74D26897FE /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				45945D8F3DAD605A883B94C9128AB860 /* ALView+PureLayout.h */,
-				5F48602517ECB353DCB8C98633FCAB09 /* ALView+PureLayout.m */,
-				7D7DC82AF6F6260F768473B043656411 /* NSArray+PureLayout.h */,
-				873FC3649F700A415796A33CE2641055 /* NSArray+PureLayout.m */,
-				E41D14862AA071D9F8A5E652619270AF /* NSLayoutConstraint+PureLayout.h */,
-				F545BE94C48C8AFEED462FE6F8D3597A /* NSLayoutConstraint+PureLayout.m */,
-				57E956DAAFFAB936CB60D9273E05D498 /* PureLayout.h */,
-				D10E06F10AB8CECE8141D32B75CCA4FE /* PureLayout+Internal.h */,
-				ACF183D164AEA03A4AA2A2F5185EFE7D /* PureLayoutDefines.h */,
-				83F65399C3808A743CC1392CF12DD692 /* Support Files */,
-			);
-			path = PureLayout;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF6E297FE0E513C3C1B22AD051D6BB88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF04B91BFCB9976420B1C9B8F1600D24 /* Info.plist */,
+				6CE217F2FD3306340AA0C8A34066E536 /* ScrollableGraphView.modulemap */,
+				87F90AFFE93C1BCE67BFFA2E10B72D09 /* ScrollableGraphView.xcconfig */,
+				D6BD1C9EF9C460547F127AF93275C486 /* ScrollableGraphView-dummy.m */,
+				F89E4B592EADA351C3A9125F944A9FDD /* ScrollableGraphView-prefix.pch */,
+				02EADD424FECAD1D5A6A898ABE139848 /* ScrollableGraphView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScrollableGraphView";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F5DC9FD2E949B123BF3D0984DD15A7EA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F2B93F5C5936E11F5B0FAB7B24C3560 /* Pods-MAnusjakBakalarka */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F6124067EC70B7736B28F2160B728C63 /* Headers */ = {
+		0F32A7B04CDB95E026FB512D33D2E29F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB4D62E8FDD6491B561B992722C852F /* ALView+PureLayout.h in Headers */,
-				D5C79F67836D844649772FD7470B4EE1 /* NSArray+PureLayout.h in Headers */,
-				9A5B9ADE4BB110E641D7FD5F4200DCE4 /* NSLayoutConstraint+PureLayout.h in Headers */,
-				E637D38660521CBD0C539D0937104B62 /* PureLayout+Internal.h in Headers */,
-				D03D21D802A77F7910BE95CED3F219C6 /* PureLayout.h in Headers */,
-				2FC50AEE5B4FD3FCC20474D33005CB65 /* PureLayoutDefines.h in Headers */,
+				A1C6D90FD41D856752B35FD6FF1D1544 /* ScrollableGraphView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27DD45A3C0C39DA7CC37230861F2A7BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FF3F23BC4B58CDA07AD4245BDEFD2C5 /* ALView+PureLayout.h in Headers */,
+				03D13A629342D8A20011D068C92A0110 /* NSArray+PureLayout.h in Headers */,
+				ADA1752D6C808AFD3C997B658276556E /* NSLayoutConstraint+PureLayout.h in Headers */,
+				EAF2195D51443E85D38671B21A5EF123 /* PureLayout+Internal.h in Headers */,
+				C0D7417B8CEE1C48092CE11F7E6F1EB5 /* PureLayout-umbrella.h in Headers */,
+				78DBCDF65489FA7084756DF9DA262166 /* PureLayout.h in Headers */,
+				4C901112FF46E235775779C9743AB52E /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75896E3AFA208037AC6BD26EB69FE652 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20929F831E0EC5872AA969CA93F70B8 /* Pods-MAnusjakBakalarka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F669D56528E6380C6A86F6679DF0839A /* PureLayout */ = {
+		1AB8234C06BC3F455B70E9BEDF20FAF5 /* Pods-MAnusjakBakalarka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AEF6545131FD39D9161068AE4F3C69C8 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildConfigurationList = 3F151BF610EBB9C890298722FA576464 /* Build configuration list for PBXNativeTarget "Pods-MAnusjakBakalarka" */;
 			buildPhases = (
-				2365C416D34C15C84C7F1C8DAC2EA96C /* Sources */,
-				F4FE35E63C4046AAE0C1DF49C2108093 /* Frameworks */,
-				F6124067EC70B7736B28F2160B728C63 /* Headers */,
+				4A969FBEE6138EEDB9B72137F4EA8F41 /* Sources */,
+				813DCF84250B42D7F69E74CF6EA36888 /* Frameworks */,
+				75896E3AFA208037AC6BD26EB69FE652 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				384D61DF87474B1F69B5A4A0E8469D58 /* PBXTargetDependency */,
+				FF6BF8E526C72326A8B5460064109E1A /* PBXTargetDependency */,
+			);
+			name = "Pods-MAnusjakBakalarka";
+			productName = "Pods-MAnusjakBakalarka";
+			productReference = 092CC81863CB0139B5967E0D09F5506A /* Pods_MAnusjakBakalarka.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A553A1D2D43CAA37383593F100F16E29 /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D7D8E0CF6F4F0A8E87F8316B0AA86B8 /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				C61F35BDCF3BD87464EECAC3C814EB4A /* Sources */,
+				D6B335B1137F22DB35A9234643886B3C /* Frameworks */,
+				27DD45A3C0C39DA7CC37230861F2A7BA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -206,25 +359,25 @@
 			);
 			name = PureLayout;
 			productName = PureLayout;
-			productReference = 821A99E37F73166B22B2140902A4F9F9 /* libPureLayout.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = A2ACEC4EC32CA18DFF944F9F95710F18 /* PureLayout.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		F8BD73E52F2C52957C8E188929BD3740 /* Pods-MAnusjakBakalarka */ = {
+		AE7AA1F3C1DE74030139FE745E842BC4 /* ScrollableGraphView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFC3F8750B810FDAB52E52537C904D44 /* Build configuration list for PBXNativeTarget "Pods-MAnusjakBakalarka" */;
+			buildConfigurationList = E4D05A2DF482EFED267DF6F48C882D00 /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */;
 			buildPhases = (
-				4BD2588D55D9E6FDE26CF1F2515900D1 /* Sources */,
-				A5AA4002B61D932462EA06F402378387 /* Frameworks */,
+				27A1BF5C3E9CE998F63134D81EB797E8 /* Sources */,
+				000CA2D772033B50D7AAE54542F30293 /* Frameworks */,
+				0F32A7B04CDB95E026FB512D33D2E29F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E4652D6FC907FCDE383D423E346C7605 /* PBXTargetDependency */,
 			);
-			name = "Pods-MAnusjakBakalarka";
-			productName = "Pods-MAnusjakBakalarka";
-			productReference = BD89E257D4EB99C68075DFC201C25D93 /* libPods-MAnusjakBakalarka.a */;
-			productType = "com.apple.product-type.library.static";
+			name = ScrollableGraphView;
+			productName = ScrollableGraphView;
+			productReference = A0D6B756778FA45A57BA5F1E20053BF8 /* ScrollableGraphView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -232,7 +385,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -243,150 +396,280 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 49ED264939F73C5CF9D4DF03438F451C /* Products */;
+			productRefGroup = 2927AD3CD1875B49237B3814A56E2579 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8BD73E52F2C52957C8E188929BD3740 /* Pods-MAnusjakBakalarka */,
-				F669D56528E6380C6A86F6679DF0839A /* PureLayout */,
+				1AB8234C06BC3F455B70E9BEDF20FAF5 /* Pods-MAnusjakBakalarka */,
+				A553A1D2D43CAA37383593F100F16E29 /* PureLayout */,
+				AE7AA1F3C1DE74030139FE745E842BC4 /* ScrollableGraphView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2365C416D34C15C84C7F1C8DAC2EA96C /* Sources */ = {
+		27A1BF5C3E9CE998F63134D81EB797E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7432CD4B8AB2DBDC853E4A62276A0B7E /* ALView+PureLayout.m in Sources */,
-				A8B21170F2728D369EC4E425A840B65C /* NSArray+PureLayout.m in Sources */,
-				BD129E88C89D3B4688A9A9F2EFFEDBAA /* NSLayoutConstraint+PureLayout.m in Sources */,
-				4519EA7A79064A5791C95DFFB0E335F0 /* PureLayout-dummy.m in Sources */,
+				D92A5BF51A78929BCDB29AC4869DA2A4 /* BarDrawingLayer.swift in Sources */,
+				979D6C2AB8262D3F161D95CC5E209F7B /* BarPlot.swift in Sources */,
+				8511CD726AA48E2CC9BCAA19D729BAC3 /* DotDrawingLayer.swift in Sources */,
+				BFB98C5D1109983EC52DBA53EF9B551E /* DotPlot.swift in Sources */,
+				106CBBB0527FFB5F9C35AF8AAB9419E5 /* FillDrawingLayer.swift in Sources */,
+				42D55F88DF54DC0A9512F43262F99D74 /* GradientDrawingLayer.swift in Sources */,
+				40FFC464B7C184C32571912C87268F1A /* GraphPoint.swift in Sources */,
+				DC090123D1C9A2DD3BF188F858C38B61 /* GraphPointAnimation.swift in Sources */,
+				6DDCD0B31BBF12756E7448E307C4F552 /* LabelPool.swift in Sources */,
+				00E616D2BB73829EFBBC8ABABC7876B6 /* LineDrawingLayer.swift in Sources */,
+				ACCD63F6381F5D2D421BE13C5533132B /* LinePlot.swift in Sources */,
+				0CB60D632E51ECD2164ABD6978378EF1 /* Plot.swift in Sources */,
+				D9B1CBA1C8640EFBA26E5AB9DA28ECBC /* ReferenceLineDrawingView.swift in Sources */,
+				1465A989C3BE9DF63D6242A7F6EC7EC3 /* ReferenceLines.swift in Sources */,
+				1CA4DEDF9C9246569EB694A44B44E90E /* ScrollableGraphView-dummy.m in Sources */,
+				AE9ACF39E296ED9F6D2F9079D5A23657 /* ScrollableGraphView.swift in Sources */,
+				7BF9230254A067BDF552A668F9B89CE5 /* ScrollableGraphViewDataSource.swift in Sources */,
+				8D47C35CC92F624ECFA789671D87A3CD /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
+				F95A9DE1F55FF3E0C4946CC010C67AE0 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BD2588D55D9E6FDE26CF1F2515900D1 /* Sources */ = {
+		4A969FBEE6138EEDB9B72137F4EA8F41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6906951B3DEDBEC96AB7FF7298C397 /* Pods-MAnusjakBakalarka-dummy.m in Sources */,
+				F402193783A4956ECDB7DC5E2B4BF4A2 /* Pods-MAnusjakBakalarka-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C61F35BDCF3BD87464EECAC3C814EB4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				150C143A932C68AFF57A44A1DB209B1B /* ALView+PureLayout.m in Sources */,
+				6C506FFB3E9F40DC3F7014358E943242 /* NSArray+PureLayout.m in Sources */,
+				5F7E53DDE24AFB8ADF9A97F269B3BB57 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				BFBB154BC354DF4A298B9490F27D4931 /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E4652D6FC907FCDE383D423E346C7605 /* PBXTargetDependency */ = {
+		384D61DF87474B1F69B5A4A0E8469D58 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
-			target = F669D56528E6380C6A86F6679DF0839A /* PureLayout */;
-			targetProxy = 890BE9957D069A89B54B2831A7B924B0 /* PBXContainerItemProxy */;
+			target = A553A1D2D43CAA37383593F100F16E29 /* PureLayout */;
+			targetProxy = 713288BD2FAF7474EE5BFE0699EA32DE /* PBXContainerItemProxy */;
+		};
+		FF6BF8E526C72326A8B5460064109E1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScrollableGraphView;
+			target = AE7AA1F3C1DE74030139FE745E842BC4 /* ScrollableGraphView */;
+			targetProxy = F6B9BD4194756A984DDC6D81EF50700D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12F1880D4CA453603075EBB2CFC47F1E /* Debug */ = {
+		2704E0E0CA18B7744CD3C60F013DA793 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A48EF27DD5A00DE15959B41C8B4F6A55 /* Pods-MAnusjakBakalarka.debug.xcconfig */;
+			baseConfigurationReference = 7E9C282422C1946791EAB94841DABE1C /* PureLayout.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				PRODUCT_NAME = PureLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		156284431C64CB05C59BDA0595A1E95A /* Release */ = {
+		39CE3735A7D6742479AA7B7CE9AD90E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F90AFFE93C1BCE67BFFA2E10B72D09 /* ScrollableGraphView.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1DEE3FD2D90A9762F80B2BA7DB6B3C4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAF7ED89E955F83FCCD66F80448E50D6 /* Pods-MAnusjakBakalarka.release.xcconfig */;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A066586F7BBC4383EBE50A449E0F892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA868B9A2DD061580CB83378D22580E4 /* Pods-MAnusjakBakalarka.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MAnusjakBakalarka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_MAnusjakBakalarka;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		C382132BB6BF8CA1A911872A2062FD0D /* Debug */ = {
+		65B5E7D8DCB459A49BE4E4A663685B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9C282422C1946791EAB94841DABE1C /* PureLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		68FECBFBEFFFC66B2A45A21704A0D5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81255B54563C46CEB68CA333FA2FB204 /* Pods-MAnusjakBakalarka.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MAnusjakBakalarka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAnusjakBakalarka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		696FA6BA524E361508F1282F4B6C1394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F90AFFE93C1BCE67BFFA2E10B72D09 /* ScrollableGraphView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -394,24 +677,27 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -420,66 +706,76 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D9FCAAA39A387EEC025263F2E1EAA95E /* Debug */ = {
+		98F29E7567052F62660DDD7069ADF73C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		E180298B8DAA19C15452C1C1D7B24BF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1951A12F7C46D8BBF64BC9D3F882A2EA /* PureLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
@@ -489,26 +785,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C382132BB6BF8CA1A911872A2062FD0D /* Debug */,
-				156284431C64CB05C59BDA0595A1E95A /* Release */,
+				7C07ED8089F70A31B83996A8910D7F18 /* Debug */,
+				98F29E7567052F62660DDD7069ADF73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AEF6545131FD39D9161068AE4F3C69C8 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+		3D7D8E0CF6F4F0A8E87F8316B0AA86B8 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D9FCAAA39A387EEC025263F2E1EAA95E /* Debug */,
-				E180298B8DAA19C15452C1C1D7B24BF1 /* Release */,
+				2704E0E0CA18B7744CD3C60F013DA793 /* Debug */,
+				65B5E7D8DCB459A49BE4E4A663685B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFC3F8750B810FDAB52E52537C904D44 /* Build configuration list for PBXNativeTarget "Pods-MAnusjakBakalarka" */ = {
+		3F151BF610EBB9C890298722FA576464 /* Build configuration list for PBXNativeTarget "Pods-MAnusjakBakalarka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12F1880D4CA453603075EBB2CFC47F1E /* Debug */,
-				1DEE3FD2D90A9762F80B2BA7DB6B3C4B /* Release */,
+				68FECBFBEFFFC66B2A45A21704A0D5AC /* Debug */,
+				4A066586F7BBC4383EBE50A449E0F892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4D05A2DF482EFED267DF6F48C882D00 /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				696FA6BA524E361508F1282F4B6C1394 /* Debug */,
+				39CE3735A7D6742479AA7B7CE9AD90E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
