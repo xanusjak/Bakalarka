@@ -11,11 +11,15 @@ import ScrollableGraphView
 
 class GraphView: UIView {
     
+    fileprivate var modelName: String!
+    
+    fileprivate var graphData = [[Double]]()
+    
     fileprivate var graph: ScrollableGraphView!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = UIColor.customBlueColor()
+    init(modelName: String) {
+        super.init(frame: .zero)
+        self.modelName = modelName
         
         setupView()
         setupConstraints()
@@ -26,6 +30,19 @@ class GraphView: UIView {
     }
     
     func setupView() {
+        
+        let data = MatlabService.sharedClient.getScopeData(modelName)
+//        print(data)
+        
+        if let scope = data[modelName + "/Scope"] as? Dictionary<String,Any> {
+            if let arrays = scope["1.0"] as? [[Any]] {
+                for arr in arrays {
+                    let doubleValues = arr as! [Double]
+                    print("\n\nDOUBLE: \(doubleValues)")
+                    graphData.append(doubleValues)
+                }
+            }
+        }
         
         graph = createGraph(.zero)
         self.addSubview(graph)
@@ -62,9 +79,10 @@ class GraphView: UIView {
         graphView.backgroundFillColor = UIColor.white
         
         graphView.dataPointSpacing = 3
+        graphView.rangeMax = 1
         
-        graphView.shouldAnimateOnStartup = true
-        graphView.shouldAdaptRange = true
+        graphView.shouldAnimateOnStartup = false
+        graphView.shouldAdaptRange = false
         graphView.shouldRangeAlwaysStartAtZero = true
         
         // Add everything to the graph.
@@ -83,7 +101,16 @@ class GraphView: UIView {
 
 extension GraphView: ScrollableGraphViewDataSource {
     func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        return 10
+        
+        switch plot.identifier {
+            case "multiBlue":
+                return graphData[1][pointIndex]
+            case "multiOrange":
+                return graphData[2][pointIndex]
+            
+            default:
+                return 0
+        }
     }
     
     func label(atIndex pointIndex: Int) -> String {
@@ -91,6 +118,6 @@ extension GraphView: ScrollableGraphViewDataSource {
     }
     
     func numberOfPoints() -> Int {
-        return 100
+        return graphData[0].count
     }
 }

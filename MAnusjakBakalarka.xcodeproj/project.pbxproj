@@ -20,6 +20,7 @@
 		519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */; };
 		519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71B11F9F76C3000FF75A /* GraphViewController.swift */; };
 		51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9D1971F74207200541580 /* UIColor+Extension.swift */; };
+		51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4B0A41FA708D900B35B90 /* MAButton.swift */; };
 		51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */; };
 		51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DD1F70F7BE00303C77 /* ViewController.swift */; };
 		51EDC2E31F70F7BE00303C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC2E21F70F7BE00303C77 /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		476ADB0D8799EBEF7DF4A906 /* Pods-MAnusjakBakalarka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAnusjakBakalarka.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka.release.xcconfig"; sourceTree = "<group>"; };
 		511617D71F828D050036B386 /* SpinnerAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerAlertViewController.swift; sourceTree = "<group>"; };
-		51519BAF1F73D1B8009589FA /* MAnusjakBakalarka-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAnusjakBakalarka-Bridging-Header.h"; sourceTree = "<group>"; };
 		51519BB01F73D6EA009589FA /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		51519BB31F73DB48009589FA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		517F889F1FA09457006DC159 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
@@ -48,6 +48,8 @@
 		519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
 		519D71B11F9F76C3000FF75A /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		51C9D1971F74207200541580 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		51D91C201FA6519D00405FB1 /* MAnusjakBakalarka-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAnusjakBakalarka-Bridging-Header.h"; sourceTree = "<group>"; };
+		51E4B0A41FA708D900B35B90 /* MAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAButton.swift; sourceTree = "<group>"; };
 		51EDC2D81F70F7BE00303C77 /* MAnusjakBakalarka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAnusjakBakalarka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51EDC2DD1F70F7BE00303C77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,8 +91,8 @@
 		51519BB21F73D7EB009589FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				51519BAF1F73D1B8009589FA /* MAnusjakBakalarka-Bridging-Header.h */,
 				51EDC3091F70F91E00303C77 /* Main.storyboard */,
+				51D91C201FA6519D00405FB1 /* MAnusjakBakalarka-Bridging-Header.h */,
 				51EDC2E71F70F7BE00303C77 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -162,6 +164,7 @@
 				517F889F1FA09457006DC159 /* BackButton.swift */,
 				51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */,
 				51EE20301FA375A700A20C07 /* GraphView.swift */,
+				51E4B0A41FA708D900B35B90 /* MAButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -258,7 +261,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2859B86BCC26C01B3787DD00 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -335,6 +338,7 @@
 				51EE20311FA375A700A20C07 /* GraphView.swift in Sources */,
 				51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */,
 				51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */,
+				51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */,
 				51519BB41F73DB48009589FA /* Utils.swift in Sources */,
 				518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */,
 			);
@@ -395,7 +399,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,7 +450,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -456,12 +464,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3X6565QF6;
 				INFOPLIST_FILE = MAnusjakBakalarka/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fei.MAnusjakBakalarka;
+				PRODUCT_BUNDLE_IDENTIFIER = fei.MAnusjakBakalarkaDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MAnusjakBakalarka/MAnusjakBakalarka-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -475,12 +486,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3X6565QF6;
 				INFOPLIST_FILE = MAnusjakBakalarka/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fei.MAnusjakBakalarka;
+				PRODUCT_BUNDLE_IDENTIFIER = fei.MAnusjakBakalarkaDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MAnusjakBakalarka/MAnusjakBakalarka-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

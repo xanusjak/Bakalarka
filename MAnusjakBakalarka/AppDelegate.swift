@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate func setupAppeareance() {
         UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

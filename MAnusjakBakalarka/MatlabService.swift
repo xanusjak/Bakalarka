@@ -78,20 +78,25 @@ class MatlabService {
     func getModels() -> Array<String>{
         
         let string = callService(urlString: Path.ip + Path.getModels)
-        let models = matches(for: "[a-zA-Z0-9_.-]*.mdl", in: string)
+        var models = matches(for: "[a-zA-Z0-9_.-]*.mdl", in: string)
+        
+        
+        for i in 0..<models.count {
+            models[i] = (models[i] as NSString).replacingOccurrences(of: ".mdl", with: "")
+        }
         
         return models
     }
     
     // Open Model
     func openModel(_ modelName: String) {
-        print("openModel")
+        print("openModel: " + Path.ip + Path.openModel + modelName)
         _ = callService(urlString: Path.ip + Path.openModel + modelName)
     }
     
     // Close Model
     func closeModel(_ modelName: String) {
-        print("closeModel")
+        print("closeModel: " + Path.ip + Path.openModel + modelName)
         _ = callService(urlString: Path.ip + Path.closeModel + modelName)
     }
     
@@ -109,10 +114,24 @@ class MatlabService {
         }
     }
     
-    func getTestScopeData() -> [String:Any] {
-        let JSONString = callService(urlString: Path.testScopeData)
+    // Start Simulation
+    func startSimulation() {
+        print("startSimulation")
+        _ = callService(urlString: Path.ip + Path.startSimulation)
+    }
+    
+    // Stop Simulation
+    func stopSimulation() {
+        print("stopSimulation")
+        _ = callService(urlString: Path.ip + Path.stopSimulation)
+    }
+    
+    func getScopeData(_ modelName: String) -> [String:Any] {
+        print("getScopeData: ")
+        let JSONString = callService(urlString: Path.ip + Path.getScopeData + modelName)
  
         if let dictionary = convertJSONToDictionary(text: JSONString) {
+            print(dictionary)
             return dictionary
         }
         else {

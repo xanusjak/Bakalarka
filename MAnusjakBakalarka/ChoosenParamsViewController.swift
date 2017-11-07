@@ -25,22 +25,39 @@ class ChoosenParamsViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete All", style: .plain, target: self, action: #selector(deleteAllSelectedParams))
+        self.navigationItem.rightBarButtonItem?.tintColor = .red
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func setupTitle() {
-        self.title = "Params"
+        self.title = ""
     }
     
     override func setupLoadView() {
         
         tableView = ChoosenParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
+        tableView.tag = 1
         self.view.addSubview(tableView)
     }
     
     override func setupConstraints() {
         
         tableView.autoPinEdgesToSuperviewEdges()
+    }
+    
+    @objc func deleteAllSelectedParams() {
+        
+        let modelSelectedParams = [String:Any]()
+        saveDictionary(dict: modelSelectedParams, forKey: "\(modelName)SelectedParams")
+       
+        tableView.loadTableData()
+        tableView.reloadData()
     }
 }

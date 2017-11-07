@@ -31,13 +31,7 @@ class ChooseParamsViewController: BaseViewController {
         return table
     }()
     
-    fileprivate let saveButton: UIButton! = {
-        var saveButton = UIButton()
-        saveButton.setTitle("Save", for: .normal)
-        saveButton.addTarget(self, action: #selector(saveSelectedParameters), for: .touchUpInside)
-        saveButton.backgroundColor = UIColor.customBlueColor()
-        return saveButton
-    }()
+    fileprivate let saveButton = MAButton(title: "Save", color: .customBlueColor(), target: self, action: #selector(saveSelectedParameters))
     
     init(modelName: String, blockName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -90,7 +84,6 @@ class ChooseParamsViewController: BaseViewController {
         table.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
         table.autoPinEdge(.bottom, to: .top, of: saveButton)
         
-        saveButton.autoSetDimension(.height, toSize: 50)
         saveButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
     

@@ -10,10 +10,8 @@ import UIKit
 
 class GraphViewController: BaseViewController {
 
-    fileprivate let graphsView : GraphView! = {
-        var view = GraphView()
-        return view
-    }()
+    fileprivate var modelName: String!
+    fileprivate var graphsView : GraphView!
     
     fileprivate let backButton: BackButton! = {
         var button = BackButton()
@@ -23,6 +21,15 @@ class GraphViewController: BaseViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    init(modelName: String) {
+        super.init(nibName: nil, bundle: nil)
+        self.modelName = modelName
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +48,8 @@ class GraphViewController: BaseViewController {
     }
     
     override func setupLoadView() {
+        
+        graphsView = GraphView(modelName: modelName)
         
         self.view.addSubview(graphsView)
         self.view.addSubview(backButton)

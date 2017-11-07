@@ -15,7 +15,7 @@ class SimulationViewController: BaseViewController {
     
     fileprivate var tableView: ChoosenParamsTableView!
     
-    fileprivate let graphView = GraphView()
+    fileprivate var graphView: GraphView!
     
     init(modelName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -32,10 +32,14 @@ class SimulationViewController: BaseViewController {
     }
     
     override func setupTitle() {
-        self.title = "Simulation"
+        self.title = ""
     }
     
     override func setupLoadView() {
+        
+        graphView = GraphView(modelName: modelName)
+        graphView.layer.borderColor = UIColor.customBlueColor().cgColor
+        graphView.layer.borderWidth = 1.0
         
         tableView = ChoosenParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
         self.view.addSubview(tableView)
@@ -51,10 +55,10 @@ class SimulationViewController: BaseViewController {
         tableView.autoPinEdge(.bottom, to: .top, of: graphView, withOffset: 0)
         
         graphView.autoSetDimension(.height, toSize: UIScreen.main.bounds.size.height/2.5)
-        graphView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
+        graphView.autoPinEdgesToSuperviewEdges(with: .init(top: 2, left: 2, bottom: 2, right: 2), excludingEdge: .top)
     }
     
     @objc func openGraphs() {
-        self.navigationController?.pushViewController(GraphViewController(), animated: true)
+        self.navigationController?.pushViewController(GraphViewController(modelName: modelName), animated: true)
     }
 }

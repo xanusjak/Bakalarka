@@ -27,13 +27,7 @@ class SettingsViewController: BaseViewController {
         return textField
     }()
     
-    fileprivate let saveButton: UIButton! = {
-        var button = UIButton()
-        button.setTitle("Save", for: .normal)
-        button.addTarget(self, action: #selector(saveChangedIp), for: .touchUpInside)
-        button.backgroundColor = UIColor.customBlueColor()
-        return button
-    }()
+    fileprivate let saveButton = MAButton(title: "Done", color: .customBlueColor(), target: self, action: #selector(saveChangedIp))
     
     init(haveConnection: Bool) {
         super.init(nibName: nil, bundle: nil)
@@ -89,22 +83,19 @@ class SettingsViewController: BaseViewController {
         ipTextField.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
         ipTextField.autoPinEdge(toSuperviewEdge: .top, withInset: (UIScreen.main.bounds.size.height-200)/2)
         
-        saveButton.autoSetDimension(.height, toSize: 50)
         saveButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
     
     @objc func saveChangedIp() {
-        
-        let alertController = SpinnerAlertViewController(title: " ", message: "Checking ip...", preferredStyle: .alert)
-        self.present(alertController, animated: true, completion: nil)
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            self.isPinging = MatlabService.sharedClient.checkIpPing()
-            DispatchQueue.main.async {
-                alertController.dismiss(animated: true, completion: nil)
-                self.upadateStatusLabel()
-            }
+        if isPinging {
+            self.navigationController?.popToRootViewController(animated: true)
         }
+        else {
+            let alert = UIAlertController(title: "Enter", message: "correct IP address", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+
     }
 }
 
@@ -112,9 +103,13 @@ class SettingsViewController: BaseViewController {
 extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         Path.changeIp = self.ipTextField.text!
         Path.ip = "http://" + Path.changeIp + ":8080/matlabadapter/api/matlab/"
-        print(Path.ip)
+        
+        isPinging = MatlabService.sharedClient.checkIpPing()
+        self.upadateStatusLabel()
+        
         self.view.endEditing(true)
         return true
     }

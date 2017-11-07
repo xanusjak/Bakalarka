@@ -12,13 +12,15 @@ class BackButton: UIButton {
 
     fileprivate let arrow: UIImageView = {
         var arrowView = UIImageView(image: #imageLiteral(resourceName: "iOSback"))
+        arrowView.image = arrowView.image!.withRenderingMode(.alwaysTemplate)
+        arrowView.tintColor = .customBlueColor()
         return arrowView
     }()
     
     fileprivate let label: UILabel = {
         var label = UILabel()
         label.text = "Back"
-        label.textColor = .black
+        label.textColor = .customBlueColor()
         label.sizeToFit()
         return label
     }()

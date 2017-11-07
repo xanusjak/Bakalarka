@@ -7,42 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E616D2BB73829EFBBC8ABABC7876B6 /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		03D13A629342D8A20011D068C92A0110 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C2C28D9E9CF8458E398FC2137539C3 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A8CECA7F362D79C45D8BD79E99B7D92 /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */; };
 		0C052F3D25C3781E57FA5EA2431BDD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0CB60D632E51ECD2164ABD6978378EF1 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		106CBBB0527FFB5F9C35AF8AAB9419E5 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590D86C52F26CB791544A37A4BFA64B /* FillDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1465A989C3BE9DF63D6242A7F6EC7EC3 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4F7F6D1E1D762BCBB054E53E13C83 /* ReferenceLines.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		150C143A932C68AFF57A44A1DB209B1B /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA0E30C808F6C3105E20820B856FF /* ALView+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1CA4DEDF9C9246569EB694A44B44E90E /* ScrollableGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BD1C9EF9C460547F127AF93275C486 /* ScrollableGraphView-dummy.m */; };
+		10CEB0FCD3832139DCA2500FF0D7CFF0 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA652BBB8806EE708AA88697F342B24 /* LinePlot.swift */; };
+		11113B203F51D9827747E3503647CCB3 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D590D86C52F26CB791544A37A4BFA64B /* FillDrawingLayer.swift */; };
+		164D22B476CF6FF2356638A1736D8C7C /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F1334878CAAC7AE0635B68D363521 /* ScrollableGraphView.swift */; };
+		19A0B17C4E83BDC6F0F642A07D62FB9D /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C089452455C3938EBDB57F9B3CA45DD9 /* NSArray+PureLayout.m */; };
+		1C16433ED76F7F2F26D34BA6780BE453 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */; };
+		21B605617D357AEE8F82D98D9CA1F34D /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */; };
+		2427B8DAC219064C4DAEE4E2724CFE8E /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */; };
 		263B09FFCE6BF09177DC5C977F60DDAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		40FFC464B7C184C32571912C87268F1A /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		42D55F88DF54DC0A9512F43262F99D74 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D6B05ACA25CEBE1906C741FCCA67E50 /* ScrollableGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BD1C9EF9C460547F127AF93275C486 /* ScrollableGraphView-dummy.m */; };
+		30F0455515691C0E1422AAD3B87DBA93 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */; };
+		4C829B8010E318F78A5F01F3549D5691 /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */; };
 		4C901112FF46E235775779C9743AB52E /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5F7E53DDE24AFB8ADF9A97F269B3BB57 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6C506FFB3E9F40DC3F7014358E943242 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C089452455C3938EBDB57F9B3CA45DD9 /* NSArray+PureLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6DDCD0B31BBF12756E7448E307C4F552 /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4CE3EC77D27AB4652AA7E8F87DE04651 /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */; };
+		5FDAC1F71C8F895C0745CFF0C166E53E /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5EB9C19BB36AE15F8A43BB92CA65D /* ScrollableGraphViewDataSource.swift */; };
 		6FF3F23BC4B58CDA07AD4245BDEFD2C5 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C23566708FDDFBBC3D97B965804439 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7619D15A13F524D572C3E5BDE1543B41 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */; };
+		76C08FEE58C98B198F085DA3919861F4 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */; };
 		78DBCDF65489FA7084756DF9DA262166 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCF453B92BCCC584A6016B3C93D7F3F /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BF9230254A067BDF552A668F9B89CE5 /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5EB9C19BB36AE15F8A43BB92CA65D /* ScrollableGraphViewDataSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7C85CAAB37C3DF6E81412BC49BD22F09 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */; };
+		80C50F73A7A3807A7F6F069A8F638716 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4F7F6D1E1D762BCBB054E53E13C83 /* ReferenceLines.swift */; };
 		8130ECB9A7F88AA358232408A8528649 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8511CD726AA48E2CC9BCAA19D729BAC3 /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8D47C35CC92F624ECFA789671D87A3CD /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		979D6C2AB8262D3F161D95CC5E209F7B /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A1C6D90FD41D856752B35FD6FF1D1544 /* ScrollableGraphView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02EADD424FECAD1D5A6A898ABE139848 /* ScrollableGraphView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACCD63F6381F5D2D421BE13C5533132B /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA652BBB8806EE708AA88697F342B24 /* LinePlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ADA1752D6C808AFD3C997B658276556E /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8CDD784A0141D27211A1208660C6DD /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE9ACF39E296ED9F6D2F9079D5A23657 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F1334878CAAC7AE0635B68D363521 /* ScrollableGraphView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BFB98C5D1109983EC52DBA53EF9B551E /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BFBB154BC354DF4A298B9490F27D4931 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C38F34139F9EAD86DA8F44AB7A21B8B0 /* PureLayout-dummy.m */; };
+		AFABEDA3DAEB98EE42D618D17F2D0171 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BDA0E30C808F6C3105E20820B856FF /* ALView+PureLayout.m */; };
+		B8CC7431B413F4713C8CEB1D65F08690 /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C38F34139F9EAD86DA8F44AB7A21B8B0 /* PureLayout-dummy.m */; };
+		B98F82907F11704249DC398E110486B6 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */; };
+		BE89350F137F76A9C28677CA53862464 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */; };
 		C0D7417B8CEE1C48092CE11F7E6F1EB5 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC23ECBCB981DD5C85EB50402C89767A /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D92A5BF51A78929BCDB29AC4869DA2A4 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D9B1CBA1C8640EFBA26E5AB9DA28ECBC /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DC090123D1C9A2DD3BF188F858C38B61 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DA8545629C8276182872DF316CD3F867 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */; };
 		E20929F831E0EC5872AA969CA93F70B8 /* Pods-MAnusjakBakalarka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58920C5895B5FC108A94D83B7695687B /* Pods-MAnusjakBakalarka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAF2195D51443E85D38671B21A5EF123 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCFFD797AE25B8D55BC8DAFE17A17DD /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F402193783A4956ECDB7DC5E2B4BF4A2 /* Pods-MAnusjakBakalarka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E9F942942EFEBF5AC05ADC394E0B7 /* Pods-MAnusjakBakalarka-dummy.m */; };
-		F95A9DE1F55FF3E0C4946CC010C67AE0 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FB92E08577AAF3D85A12C17D36A8D028 /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +64,8 @@
 
 /* Begin PBXFileReference section */
 		02EADD424FECAD1D5A6A898ABE139848 /* ScrollableGraphView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-umbrella.h"; sourceTree = "<group>"; };
-		092CC81863CB0139B5967E0D09F5506A /* Pods_MAnusjakBakalarka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAnusjakBakalarka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		12242355FB294512BDAE01538FD8AE5A /* Pods-MAnusjakBakalarka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MAnusjakBakalarka.modulemap"; sourceTree = "<group>"; };
+		092CC81863CB0139B5967E0D09F5506A /* Pods_MAnusjakBakalarka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MAnusjakBakalarka.framework; path = "Pods-MAnusjakBakalarka.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12242355FB294512BDAE01538FD8AE5A /* Pods-MAnusjakBakalarka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MAnusjakBakalarka.modulemap"; sourceTree = "<group>"; };
 		17238490373C3CAC95C040546C9BD343 /* LabelPool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelPool.swift; path = Classes/Reference/LabelPool.swift; sourceTree = "<group>"; };
 		1EF5219180B425C6C52622C7DD3071E3 /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingDelegate.swift; path = Classes/Protocols/ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
 		216A03A8234ED9FFCA81113CC656FE0E /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientDrawingLayer.swift; path = Classes/Drawing/GradientDrawingLayer.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		60C23566708FDDFBBC3D97B965804439 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6A7CDF094550649CAC68FC2DE634E157 /* DotPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotPlot.swift; path = Classes/Plots/DotPlot.swift; sourceTree = "<group>"; };
-		6CE217F2FD3306340AA0C8A34066E536 /* ScrollableGraphView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ScrollableGraphView.modulemap; sourceTree = "<group>"; };
+		6CE217F2FD3306340AA0C8A34066E536 /* ScrollableGraphView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ScrollableGraphView.modulemap; sourceTree = "<group>"; };
 		702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingLayer.swift; path = Classes/Drawing/ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
 		77ACAC8D344DC7C9BBAB5C5F155704AF /* GraphPointAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPointAnimation.swift; path = Classes/Plots/Animation/GraphPointAnimation.swift; sourceTree = "<group>"; };
 		79289DAB91AB23F0320169E8AB2722EA /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
@@ -91,11 +91,11 @@
 		8312CD773A268FFF2B6340356BD1580B /* GraphPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPoint.swift; path = Classes/Plots/Animation/GraphPoint.swift; sourceTree = "<group>"; };
 		87F90AFFE93C1BCE67BFFA2E10B72D09 /* ScrollableGraphView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableGraphView.xcconfig; sourceTree = "<group>"; };
 		91FEE96CE9D24F7ABECB20988B8CE669 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLineDrawingView.swift; path = Classes/Drawing/ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D645274BBC1992508F2ABBDF920CA51 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarDrawingLayer.swift; path = Classes/Drawing/BarDrawingLayer.swift; sourceTree = "<group>"; };
 		A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
-		A0D6B756778FA45A57BA5F1E20053BF8 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ScrollableGraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2ACEC4EC32CA18DFF944F9F95710F18 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D6B756778FA45A57BA5F1E20053BF8 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScrollableGraphView.framework; path = ScrollableGraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2ACEC4EC32CA18DFF944F9F95710F18 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PureLayout.framework; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67E5C779DBABCBB16BD76B042F5212E /* Plot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plot.swift; path = Classes/Plots/Plot.swift; sourceTree = "<group>"; };
 		A6EEB7D11847628580D958E40DD6AFB4 /* DotDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotDrawingLayer.swift; path = Classes/Drawing/DotDrawingLayer.swift; sourceTree = "<group>"; };
 		AF04B91BFCB9976420B1C9B8F1600D24 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		DA078943F824DC98034A9D9B199A2AF4 /* BarPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPlot.swift; path = Classes/Plots/BarPlot.swift; sourceTree = "<group>"; };
 		DBCFFD797AE25B8D55BC8DAFE17A17DD /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
 		DD40573F9CD7B7C2D97E3CE601161FBE /* LineDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineDrawingLayer.swift; path = Classes/Drawing/LineDrawingLayer.swift; sourceTree = "<group>"; };
-		E09B33B11AAD44674A4E7E22A19FCB57 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
+		E09B33B11AAD44674A4E7E22A19FCB57 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		EA868B9A2DD061580CB83378D22580E4 /* Pods-MAnusjakBakalarka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAnusjakBakalarka.release.xcconfig"; sourceTree = "<group>"; };
 		EC23ECBCB981DD5C85EB50402C89767A /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		EE92C708FE702E28A219919F7330F4DE /* Pods-MAnusjakBakalarka-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAnusjakBakalarka-frameworks.sh"; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 				702129B7EC07B47DE4D184E5D0AA11A9 /* ScrollableGraphViewDrawingLayer.swift */,
 				CF6E297FE0E513C3C1B22AD051D6BB88 /* Support Files */,
 			);
+			name = ScrollableGraphView;
 			path = ScrollableGraphView;
 			sourceTree = "<group>";
 		};
@@ -206,6 +207,7 @@
 				A079BB88B10DD81243E585F714AEA0ED /* PureLayoutDefines.h */,
 				B26B5F047664CD3DDF7E9AE07BCFAC5B /* Support Files */,
 			);
+			name = PureLayout;
 			path = PureLayout;
 			sourceTree = "<group>";
 		};
@@ -349,7 +351,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D7D8E0CF6F4F0A8E87F8316B0AA86B8 /* Build configuration list for PBXNativeTarget "PureLayout" */;
 			buildPhases = (
-				C61F35BDCF3BD87464EECAC3C814EB4A /* Sources */,
+				8BC0CBBF7CB97643BB05EEF3F8DD9875 /* Sources */,
 				D6B335B1137F22DB35A9234643886B3C /* Frameworks */,
 				27DD45A3C0C39DA7CC37230861F2A7BA /* Headers */,
 			);
@@ -366,7 +368,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4D05A2DF482EFED267DF6F48C882D00 /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */;
 			buildPhases = (
-				27A1BF5C3E9CE998F63134D81EB797E8 /* Sources */,
+				F646945ADA58C7BF86D3ABBECAB13C0D /* Sources */,
 				000CA2D772033B50D7AAE54542F30293 /* Frameworks */,
 				0F32A7B04CDB95E026FB512D33D2E29F /* Headers */,
 			);
@@ -386,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -408,32 +410,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27A1BF5C3E9CE998F63134D81EB797E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D92A5BF51A78929BCDB29AC4869DA2A4 /* BarDrawingLayer.swift in Sources */,
-				979D6C2AB8262D3F161D95CC5E209F7B /* BarPlot.swift in Sources */,
-				8511CD726AA48E2CC9BCAA19D729BAC3 /* DotDrawingLayer.swift in Sources */,
-				BFB98C5D1109983EC52DBA53EF9B551E /* DotPlot.swift in Sources */,
-				106CBBB0527FFB5F9C35AF8AAB9419E5 /* FillDrawingLayer.swift in Sources */,
-				42D55F88DF54DC0A9512F43262F99D74 /* GradientDrawingLayer.swift in Sources */,
-				40FFC464B7C184C32571912C87268F1A /* GraphPoint.swift in Sources */,
-				DC090123D1C9A2DD3BF188F858C38B61 /* GraphPointAnimation.swift in Sources */,
-				6DDCD0B31BBF12756E7448E307C4F552 /* LabelPool.swift in Sources */,
-				00E616D2BB73829EFBBC8ABABC7876B6 /* LineDrawingLayer.swift in Sources */,
-				ACCD63F6381F5D2D421BE13C5533132B /* LinePlot.swift in Sources */,
-				0CB60D632E51ECD2164ABD6978378EF1 /* Plot.swift in Sources */,
-				D9B1CBA1C8640EFBA26E5AB9DA28ECBC /* ReferenceLineDrawingView.swift in Sources */,
-				1465A989C3BE9DF63D6242A7F6EC7EC3 /* ReferenceLines.swift in Sources */,
-				1CA4DEDF9C9246569EB694A44B44E90E /* ScrollableGraphView-dummy.m in Sources */,
-				AE9ACF39E296ED9F6D2F9079D5A23657 /* ScrollableGraphView.swift in Sources */,
-				7BF9230254A067BDF552A668F9B89CE5 /* ScrollableGraphViewDataSource.swift in Sources */,
-				8D47C35CC92F624ECFA789671D87A3CD /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
-				F95A9DE1F55FF3E0C4946CC010C67AE0 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4A969FBEE6138EEDB9B72137F4EA8F41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,14 +418,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C61F35BDCF3BD87464EECAC3C814EB4A /* Sources */ = {
+		8BC0CBBF7CB97643BB05EEF3F8DD9875 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				150C143A932C68AFF57A44A1DB209B1B /* ALView+PureLayout.m in Sources */,
-				6C506FFB3E9F40DC3F7014358E943242 /* NSArray+PureLayout.m in Sources */,
-				5F7E53DDE24AFB8ADF9A97F269B3BB57 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				BFBB154BC354DF4A298B9490F27D4931 /* PureLayout-dummy.m in Sources */,
+				AFABEDA3DAEB98EE42D618D17F2D0171 /* ALView+PureLayout.m in Sources */,
+				19A0B17C4E83BDC6F0F642A07D62FB9D /* NSArray+PureLayout.m in Sources */,
+				BE89350F137F76A9C28677CA53862464 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				B8CC7431B413F4713C8CEB1D65F08690 /* PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F646945ADA58C7BF86D3ABBECAB13C0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C08FEE58C98B198F085DA3919861F4 /* BarDrawingLayer.swift in Sources */,
+				0A8CECA7F362D79C45D8BD79E99B7D92 /* BarPlot.swift in Sources */,
+				FB92E08577AAF3D85A12C17D36A8D028 /* DotDrawingLayer.swift in Sources */,
+				DA8545629C8276182872DF316CD3F867 /* DotPlot.swift in Sources */,
+				11113B203F51D9827747E3503647CCB3 /* FillDrawingLayer.swift in Sources */,
+				1C16433ED76F7F2F26D34BA6780BE453 /* GradientDrawingLayer.swift in Sources */,
+				4CE3EC77D27AB4652AA7E8F87DE04651 /* GraphPoint.swift in Sources */,
+				7C85CAAB37C3DF6E81412BC49BD22F09 /* GraphPointAnimation.swift in Sources */,
+				4C829B8010E318F78A5F01F3549D5691 /* LabelPool.swift in Sources */,
+				2427B8DAC219064C4DAEE4E2724CFE8E /* LineDrawingLayer.swift in Sources */,
+				10CEB0FCD3832139DCA2500FF0D7CFF0 /* LinePlot.swift in Sources */,
+				B98F82907F11704249DC398E110486B6 /* Plot.swift in Sources */,
+				7619D15A13F524D572C3E5BDE1543B41 /* ReferenceLineDrawingView.swift in Sources */,
+				80C50F73A7A3807A7F6F069A8F638716 /* ReferenceLines.swift in Sources */,
+				2D6B05ACA25CEBE1906C741FCCA67E50 /* ScrollableGraphView-dummy.m in Sources */,
+				164D22B476CF6FF2356638A1736D8C7C /* ScrollableGraphView.swift in Sources */,
+				5FDAC1F71C8F895C0745CFF0C166E53E /* ScrollableGraphViewDataSource.swift in Sources */,
+				21B605617D357AEE8F82D98D9CA1F34D /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
+				30F0455515691C0E1422AAD3B87DBA93 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +776,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;

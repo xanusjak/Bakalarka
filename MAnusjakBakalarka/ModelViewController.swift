@@ -14,45 +14,15 @@ class ModelViewController: BaseViewController {
     
     fileprivate var modelDict: [String:Any]!
     
-    fileprivate var chooseParamsButton: UIButton! = {
-        var chooseParamsButton = UIButton()
-        chooseParamsButton.setTitle("Chose parameters", for: .normal)
-        chooseParamsButton.addTarget(self, action: #selector(openChoseParamsVC), for: .touchUpInside)
-        chooseParamsButton.backgroundColor = UIColor.customBlueColor()
-        return chooseParamsButton
-    }()
+    fileprivate var chooseParamsButton = MAButton(title: "Select Parameters", color: .customBlueColor(), target: self, action: #selector(openChoseParamsVC))
     
-    fileprivate var choosenParamsButton: UIButton! = {
-        var choosenParamsButton = UIButton()
-        choosenParamsButton.setTitle("Choosen Params", for: .normal)
-        choosenParamsButton.addTarget(self, action: #selector(openChoosenParams), for: .touchUpInside)
-        choosenParamsButton.backgroundColor = UIColor.customBlueColor()
-        return choosenParamsButton
-    }()
+    fileprivate var choosenParamsButton = MAButton(title: "Edit Parameters", color: .customBlueColor(), target: self, action: #selector(openChoosenParams))
     
-    fileprivate var startSimButton: UIButton! = {
-        var startSimButton = UIButton()
-        startSimButton.setTitle("Simulation", for: .normal)
-        startSimButton.addTarget(self, action: #selector(openSimulationVC), for: .touchUpInside)
-        startSimButton.backgroundColor = UIColor.customBlueColor()
-        return startSimButton
-    }()
+    fileprivate var uploadButton = MAButton(title: "Upload Model", color: .customBlueColor(), target: self, action: #selector(uploadModel))
     
-    fileprivate var uploadButton: UIButton! = {
-        var uploadButton = UIButton()
-        uploadButton.setTitle("Upload", for: .normal)
-        uploadButton.addTarget(self, action: #selector(uploadModel), for: .touchUpInside)
-        uploadButton.backgroundColor = UIColor.customBlueColor()
-        return uploadButton
-    }()
+    fileprivate var startSimButton = MAButton(title: "Start Simulation", color: .customGreenColor(), target: self, action: #selector(startSimulation))
     
-    fileprivate var closeModelButton: UIButton! = {
-        var closeModelButton = UIButton()
-        closeModelButton.setTitle("Close Model", for: .normal)
-        closeModelButton.addTarget(self, action: #selector(closeMatlabModel), for: .touchUpInside)
-        closeModelButton.backgroundColor = UIColor.customRedColor()
-        return closeModelButton
-    }()
+    fileprivate var closeModelButton = MAButton(title: "Close Model", color: .customRedColor(), target: self, action: #selector(closeMatlabModel))
     
     init(modelName: String) {
         super.init(nibName: nil, bundle: nil)
@@ -92,27 +62,22 @@ class ModelViewController: BaseViewController {
     
     override func setupConstraints() {
         
-        chooseParamsButton.autoSetDimension(.height, toSize: 50)
         chooseParamsButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         chooseParamsButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
         chooseParamsButton.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
         
-        choosenParamsButton.autoSetDimension(.height, toSize: 50)
         choosenParamsButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         choosenParamsButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
         choosenParamsButton.autoPinEdge(.top, to: .bottom, of: chooseParamsButton, withOffset: 20)
         
-        startSimButton.autoSetDimension(.height, toSize: 50)
-        startSimButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
-        startSimButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-        startSimButton.autoPinEdge(.top, to: .bottom, of: choosenParamsButton, withOffset: 20)
-        
-        uploadButton.autoSetDimension(.height, toSize: 50)
         uploadButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         uploadButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-        uploadButton.autoPinEdge(.top, to: .bottom, of: startSimButton, withOffset: 20)
+        uploadButton.autoPinEdge(.top, to: .bottom, of: choosenParamsButton, withOffset: 20)
         
-        closeModelButton.autoSetDimension(.height, toSize: 50)
+        startSimButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
+        startSimButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
+        startSimButton.autoPinEdge(.top, to: .bottom, of: uploadButton, withOffset: 20)
+        
         closeModelButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
 }
@@ -128,7 +93,7 @@ extension ModelViewController {
         self.navigationController?.pushViewController(ChoosenParamsViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
-    @objc func openSimulationVC() {
+    @objc func startSimulation() {
         self.navigationController?.pushViewController(SimulationViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
@@ -143,8 +108,9 @@ extension ModelViewController {
         DispatchQueue.global(qos: .userInitiated).async {
             MatlabService.sharedClient.closeModel(self.modelName)
             DispatchQueue.main.async {
-                alertController.dismiss(animated: true, completion: nil)
-                self.navigationController?.popToRootViewController(animated: true)
+                alertController.dismiss(animated: true, completion:  {
+                    self.navigationController?.popToRootViewController(animated: true)
+                })
             }
         }
     }

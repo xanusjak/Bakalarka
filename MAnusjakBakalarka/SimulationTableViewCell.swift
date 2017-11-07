@@ -43,6 +43,10 @@ class SimulationTableViewCell: UITableViewCell {
         return label
     }()
     
+    func getCellName() -> String {
+        return label.text!
+    }
+    
     init(text: String, paramInfo: [String:Any], reuseIdentifier: String, viewController: BaseViewController) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
@@ -87,7 +91,7 @@ class SimulationTableViewCell: UITableViewCell {
             for eachEnum in paramInfo["enumList"] as! [String] {
                 enumList.append(eachEnum)
             }
-            setupEnumButton(value: paramInfo["defaultValue"] as! String)
+            setupEnumLabel(value: paramInfo["defaultValue"] as! String)
         }
     }
 
@@ -113,9 +117,9 @@ class SimulationTableViewCell: UITableViewCell {
         label.autoPinEdge(.right, to: .left, of: switcher, withOffset: -25)
     }
     
-    func setupEnumButton(value: String) {
+    func setupEnumLabel(value: String) {
         
-        let tap = UITapGestureRecognizer(target:self, action:#selector(openVolaco))
+        let tap = UITapGestureRecognizer(target:self, action:#selector(chooseEnumValue))
         enumLabel.addGestureRecognizer(tap)
         enumLabel.text = value
         self.addSubview(enumLabel)
@@ -126,7 +130,7 @@ class SimulationTableViewCell: UITableViewCell {
         label.autoPinEdge(.right, to: .left, of: enumLabel, withOffset: -10)
     }
     
-    @objc func openVolaco() {
+    @objc func chooseEnumValue() {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
