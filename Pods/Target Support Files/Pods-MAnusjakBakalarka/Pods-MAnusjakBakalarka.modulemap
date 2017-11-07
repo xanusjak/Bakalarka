@@ -1,0 +1,6 @@
+framework module Pods_MAnusjakBakalarka {
+  umbrella header "Pods-MAnusjakBakalarka-umbrella.h"
+
+  export *
+  module * { export * }
+}
