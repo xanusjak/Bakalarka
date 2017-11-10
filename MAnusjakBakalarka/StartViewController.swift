@@ -10,21 +10,13 @@ import UIKit
 
 class StartViewController: BaseViewController {
     
-    fileprivate var modelName = "none"
+    fileprivate var modelName: String!
     
-    fileprivate var modelsList = Array<String>()
+    fileprivate var modelsList = [String]()
+    
+    fileprivate var openModels = [String]()
     
     fileprivate let logoView = UIImageView(image: #imageLiteral(resourceName: "bakalarkaLogo"))
-    
-    fileprivate var modelNameLabel: UILabel! = {
-        var label = UILabel()
-        label.isUserInteractionEnabled = true
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.textColor = .customBlueColor()
-        label.text = "Tap to choose model"
-        return label
-    }()
     
     fileprivate var matlabAdapterLabel: UILabel! = {
         var label = UILabel()
@@ -39,16 +31,16 @@ class StartViewController: BaseViewController {
     
     fileprivate let openModelButton = MAButton(title: "Open Model", color: .customBlueColor(), target: self, action: #selector(openMatlabModel))
     
-    fileprivate let downloadModelButton = MAButton(title: "Download Model", color: .customBlueColor(), target: self, action: #selector(openMatlabModel))
+    fileprivate let showOpenModelsButton = MAButton(title: "Show open Models", color: .customBlueColor(), target: self, action: #selector(openModelsVC))
+    
+    fileprivate let uploadButton = MAButton(title: "TODO:// Upload", color: .customBlueColor(), target: self, action: #selector(stopMatlabAdapter))
     
     fileprivate let startMatlabButton = MAButton(title: "Start Matlab", color: .customGreenColor(), target: self, action: #selector(startMatlabAdapter))
-    
-    fileprivate let stopMatlabButton = MAButton(title: "Stop Matlab", color: .customRedColor(), target: self, action: #selector(stopMatlabAdapter))
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .done, target: self, action: #selector(openSettings))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .done, target: self, action: #selector(openSettings))
         self.checkMatlabStatus()
     }
     
@@ -64,12 +56,10 @@ class StartViewController: BaseViewController {
         
         view.addSubview(logoView)
         view.addSubview(matlabAdapterLabel)
-        
-        view.addSubview(modelNameLabel)
         view.addSubview(openModelButton)
-        view.addSubview(downloadModelButton)
+        view.addSubview(showOpenModelsButton)
         view.addSubview(startMatlabButton)
-        view.addSubview(stopMatlabButton)
+        view.addSubview(uploadButton)
     }
     
     func checkMatlabStatus() {
@@ -77,31 +67,24 @@ class StartViewController: BaseViewController {
         if MatlabService.sharedClient.isMatlabRuning() {
             
             modelsList = MatlabService.sharedClient.getModels()
-            let tap = UITapGestureRecognizer(target:self, action:#selector(chooseModel))
-            modelNameLabel.addGestureRecognizer(tap)
-            
-            for name in modelsList {
-                if (MatlabService.sharedClient.isModelOpened(modelName: name)) {
-                    self.navigationController?.pushViewController(ModelViewController(modelName: name), animated: true)
-                }
-            }
             
             startMatlabButton.isHidden = true
-            stopMatlabButton.isHidden = false
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "STOP", style: .done, target: self, action: #selector(stopMatlabAdapter))
+            self.navigationItem.rightBarButtonItem?.tintColor = .red
             
-            modelNameLabel.isHidden = false
+            uploadButton.isHidden = false
             openModelButton.isHidden = false
-            downloadModelButton.isHidden = false
+            showOpenModelsButton.isHidden = false
             
         }
         else {
             
             startMatlabButton.isHidden = false
-            stopMatlabButton.isHidden = true
+            self.navigationItem.rightBarButtonItem = nil
             
-            modelNameLabel.isHidden = true
+            uploadButton.isHidden = true
             openModelButton.isHidden = true
-            downloadModelButton.isHidden = true
+            showOpenModelsButton.isHidden = true
         }
     }
     
@@ -113,29 +96,30 @@ class StartViewController: BaseViewController {
         matlabAdapterLabel.autoSetDimension(.height, toSize: 50)
         matlabAdapterLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         matlabAdapterLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-        matlabAdapterLabel.autoPinEdge(.bottom, to: .top, of: modelNameLabel, withOffset: -15)
-        
-        modelNameLabel.autoSetDimension(.height, toSize: 50)
-        modelNameLabel.autoPinEdge(toSuperviewEdge: .left)
-        modelNameLabel.autoPinEdge(toSuperviewEdge: .right)
-        modelNameLabel.autoPinEdge(.bottom, to: .top, of: openModelButton, withOffset: -15)
+        matlabAdapterLabel.autoPinEdge(.bottom, to: .top, of: openModelButton, withOffset: -15)
         
         openModelButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         openModelButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-        openModelButton.autoPinEdge(.bottom, to: .top, of: downloadModelButton, withOffset: -15)
+        openModelButton.autoPinEdge(.bottom, to: .top, of: showOpenModelsButton, withOffset: -15)
         
-        downloadModelButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
-        downloadModelButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-        downloadModelButton.autoPinEdge(.bottom, to: .top, of: startMatlabButton, withOffset: -15)
+        showOpenModelsButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
+        showOpenModelsButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
+        showOpenModelsButton.autoPinEdge(.bottom, to: .top, of: uploadButton, withOffset: -15)
+        
+        uploadButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
+        uploadButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
+        uploadButton.autoPinEdge(.bottom, to: .top, of: startMatlabButton, withOffset: -15)
         
         startMatlabButton.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 15, bottom: 25, right: 15), excludingEdge: .top)
-        
-        stopMatlabButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
+}
+    
+//BUTTONS ACTIONS
+extension StartViewController {
     
     @objc func openSettings() {
         if MatlabService.sharedClient.isMatlabRuning() {
-            let alert = UIAlertController(title: "Stop Matlab", message: "to change settings", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Stop Matlab", message: "To change settings.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
@@ -144,20 +128,58 @@ class StartViewController: BaseViewController {
         }
     }
     
-    @objc func chooseModel() {
-        
+    @objc func openMatlabModel() {
+
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         for enumString in modelsList {
             let choise = UIAlertAction(title: enumString, style: .default) {
                 _ in
-                self.modelNameLabel.text = enumString
                 self.modelName = enumString
+                
+                let alertController = SpinnerAlertViewController(title: " ", message: "Opening \(self.modelName as String)...", preferredStyle: .alert)
+                self.present(alertController, animated: true, completion: nil)
+
+                DispatchQueue.global(qos: .userInitiated).async {
+                    if !MatlabService.sharedClient.isModelOpened(modelName: self.modelName) {
+                        MatlabService.sharedClient.openModel(self.modelName)
+                    }
+                    DispatchQueue.main.async {
+                        alertController.dismiss(animated: true, completion: {
+                            self.navigationController?.pushViewController(ModelViewController(modelName: self.modelName), animated: true)
+                        })
+                    }
+                }
+
             }
             alert.addAction(choise)
         }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func openModelsVC() {
+        
+        let alertController = SpinnerAlertViewController(title: " ", message: "Checking...", preferredStyle: .alert)
+        self.present(alertController, animated: true, completion: nil)
+         openModels.removeAll()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            
+            for name in self.modelsList {
+                if (MatlabService.sharedClient.isModelOpened(modelName: name)) {
+                    self.openModels.append(name)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                alertController.dismiss(animated: true, completion: {
+                    self.navigationController?.pushViewController(OpenModelsViewController(openModels: self.openModels), animated: true)
+                })
+            }
+        }
+        
     }
     
     @objc func startMatlabAdapter() {
@@ -172,32 +194,6 @@ class StartViewController: BaseViewController {
                 self.checkMatlabStatus()
             }
         }
-    }
-    
-    @objc func openMatlabModel() {
-        
-        if modelName == "none" {
-            let alert = UIAlertController(title: "Please", message: "Choose model", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
-            let alertController = SpinnerAlertViewController(title: " ", message: "Opening model...", preferredStyle: .alert)
-            self.present(alertController, animated: true, completion: nil)
-
-            DispatchQueue.global(qos: .userInitiated).async {
-                MatlabService.sharedClient.openModel(self.modelName)
-                DispatchQueue.main.async {
-                    alertController.dismiss(animated: true, completion: {
-                        self.navigationController?.pushViewController(ModelViewController(modelName: self.modelName), animated: true)
-                    })
-                }
-            }
-        }
-    }
-    
-    @objc func downloadMatlabModel() {
-        print("Download Model")
     }
     
     @objc func stopMatlabAdapter() {

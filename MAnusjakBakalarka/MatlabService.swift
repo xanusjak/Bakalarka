@@ -78,11 +78,11 @@ class MatlabService {
     func getModels() -> Array<String>{
         
         let string = callService(urlString: Path.ip + Path.getModels)
-        var models = matches(for: "[a-zA-Z0-9_.-]*.mdl", in: string)
+        var models = matches(for: "[a-zA-Z0-9_.-]*.mdl\\s", in: string)
         
         
         for i in 0..<models.count {
-            models[i] = (models[i] as NSString).replacingOccurrences(of: ".mdl", with: "")
+            models[i] = (models[i] as NSString).trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: ".mdl", with: "")
         }
         
         return models
@@ -115,15 +115,15 @@ class MatlabService {
     }
     
     // Start Simulation
-    func startSimulation() {
+    func startSimulation(_ modelName: String) {
         print("startSimulation")
-        _ = callService(urlString: Path.ip + Path.startSimulation)
+        _ = callService(urlString: Path.ip + Path.startSimulation + modelName)
     }
     
     // Stop Simulation
-    func stopSimulation() {
+    func stopSimulation(_ modelName: String) {
         print("stopSimulation")
-        _ = callService(urlString: Path.ip + Path.stopSimulation)
+        _ = callService(urlString: Path.ip + Path.stopSimulation + modelName)
     }
     
     func getScopeData(_ modelName: String) -> [String:Any] {

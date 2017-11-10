@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseParamsViewController: BaseViewController {
+class SelectParamsViewController: BaseViewController {
     
     fileprivate var modelName: String!
     
@@ -31,7 +31,7 @@ class ChooseParamsViewController: BaseViewController {
         return table
     }()
     
-    fileprivate let saveButton = MAButton(title: "Save", color: .customBlueColor(), target: self, action: #selector(saveSelectedParameters), rounded: false)
+    fileprivate let saveButton = MAButton(title: "Save", color: .customBlueColor(), target: self, action: #selector(saveSelectedParameters))
     
     init(modelName: String, blockName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -107,7 +107,7 @@ class ChooseParamsViewController: BaseViewController {
 }
 
 
-extension ChooseParamsViewController: UITableViewDataSource {
+extension SelectParamsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return blockParams.count
@@ -134,7 +134,7 @@ extension ChooseParamsViewController: UITableViewDataSource {
 }
 
 
-extension ChooseParamsViewController: UITableViewDelegate {
+extension SelectParamsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true

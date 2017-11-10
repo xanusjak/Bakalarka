@@ -12,7 +12,7 @@
 		51519BB11F73D6EA009589FA /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51519BB01F73D6EA009589FA /* Path.swift */; };
 		51519BB41F73DB48009589FA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51519BB31F73DB48009589FA /* Utils.swift */; };
 		517F88A01FA09457006DC159 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F889F1FA09457006DC159 /* BackButton.swift */; };
-		518FF3A81F8B9A4100212741 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A71F8B9A4100212741 /* SimulationViewController.swift */; };
+		518FF3A81F8B9A4100212741 /* StartSimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */; };
 		518FF3AA1F8B9AAA00212741 /* ChooseBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */; };
 		518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */; };
 		518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */; };
@@ -20,16 +20,18 @@
 		519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */; };
 		519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71B11F9F76C3000FF75A /* GraphViewController.swift */; };
 		51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9D1971F74207200541580 /* UIColor+Extension.swift */; };
+		51CC60911FB43F76003CC852 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC60901FB43F76003CC852 /* SimulationViewController.swift */; };
 		51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4B0A41FA708D900B35B90 /* MAButton.swift */; };
+		51E9A97D1FB308910085310F /* OpenModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9A97C1FB308910085310F /* OpenModelsViewController.swift */; };
 		51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */; };
 		51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DD1F70F7BE00303C77 /* ViewController.swift */; };
 		51EDC2E31F70F7BE00303C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC2E21F70F7BE00303C77 /* Assets.xcassets */; };
 		51EDC30A1F70F91E00303C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC3091F70F91E00303C77 /* Main.storyboard */; };
 		51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */; };
 		51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC30F1F70FEB000303C77 /* StartViewController.swift */; };
-		51EE202F1FA3716200A20C07 /* ChoosenParamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */; };
+		51EE202F1FA3716200A20C07 /* EditParamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE202E1FA3716200A20C07 /* EditParamsTableView.swift */; };
 		51EE20311FA375A700A20C07 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE20301FA375A700A20C07 /* GraphView.swift */; };
-		51EE20331FA376F300A20C07 /* ChoosenParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */; };
+		51EE20331FA376F300A20C07 /* EditParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE20321FA376F300A20C07 /* EditParamsViewController.swift */; };
 		51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA77E31F8587A90035D701 /* MatlabService.swift */; };
 		51FA77E61F8596A40035D701 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FA77E51F8596A40035D701 /* ModelViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +42,7 @@
 		51519BB01F73D6EA009589FA /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		51519BB31F73DB48009589FA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		517F889F1FA09457006DC159 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		518FF3A71F8B9A4100212741 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
+		518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSimulationViewController.swift; sourceTree = "<group>"; };
 		518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBlockViewController.swift; sourceTree = "<group>"; };
 		518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseParamsViewController.swift; sourceTree = "<group>"; };
 		518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -48,8 +50,10 @@
 		519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
 		519D71B11F9F76C3000FF75A /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		51C9D1971F74207200541580 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		51CC60901FB43F76003CC852 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
 		51D91C201FA6519D00405FB1 /* MAnusjakBakalarka-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAnusjakBakalarka-Bridging-Header.h"; sourceTree = "<group>"; };
 		51E4B0A41FA708D900B35B90 /* MAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAButton.swift; sourceTree = "<group>"; };
+		51E9A97C1FB308910085310F /* OpenModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenModelsViewController.swift; sourceTree = "<group>"; };
 		51EDC2D81F70F7BE00303C77 /* MAnusjakBakalarka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAnusjakBakalarka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51EDC2DD1F70F7BE00303C77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +62,9 @@
 		51EDC3091F70F91E00303C77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		51EDC30F1F70FEB000303C77 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenParamsTableView.swift; sourceTree = "<group>"; };
+		51EE202E1FA3716200A20C07 /* EditParamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditParamsTableView.swift; sourceTree = "<group>"; };
 		51EE20301FA375A700A20C07 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenParamsViewController.swift; sourceTree = "<group>"; };
+		51EE20321FA376F300A20C07 /* EditParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditParamsViewController.swift; sourceTree = "<group>"; };
 		51FA77E31F8587A90035D701 /* MatlabService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatlabService.swift; sourceTree = "<group>"; };
 		51FA77E51F8596A40035D701 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		5BDA48E135E52D06927D06C9 /* Pods-MAnusjakBakalarka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAnusjakBakalarka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAnusjakBakalarka/Pods-MAnusjakBakalarka.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +111,33 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		51CC60921FB4440E003CC852 /* Simulation */ = {
+			isa = PBXGroup;
+			children = (
+				51CC60901FB43F76003CC852 /* SimulationViewController.swift */,
+				518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */,
+				519D71B11F9F76C3000FF75A /* GraphViewController.swift */,
+			);
+			name = Simulation;
+			sourceTree = "<group>";
+		};
+		51CC60931FB4443C003CC852 /* SelectParameters */ = {
+			isa = PBXGroup;
+			children = (
+				518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */,
+				518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */,
+			);
+			name = SelectParameters;
+			sourceTree = "<group>";
+		};
+		51CC60941FB4445C003CC852 /* EditParameters */ = {
+			isa = PBXGroup;
+			children = (
+				51EE20321FA376F300A20C07 /* EditParamsViewController.swift */,
+			);
+			name = EditParameters;
+			sourceTree = "<group>";
+		};
 		51EDC2CF1F70F7BE00303C77 = {
 			isa = PBXGroup;
 			children = (
@@ -146,14 +177,13 @@
 			isa = PBXGroup;
 			children = (
 				51FA77E71F8596B20035D701 /* Helppers */,
-				518FF3AF1F8D61A000212741 /* SettingsViewController.swift */,
 				51EDC30F1F70FEB000303C77 /* StartViewController.swift */,
+				518FF3AF1F8D61A000212741 /* SettingsViewController.swift */,
+				51E9A97C1FB308910085310F /* OpenModelsViewController.swift */,
 				51FA77E51F8596A40035D701 /* ModelViewController.swift */,
-				518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */,
-				518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */,
-				51EE20321FA376F300A20C07 /* ChoosenParamsViewController.swift */,
-				518FF3A71F8B9A4100212741 /* SimulationViewController.swift */,
-				519D71B11F9F76C3000FF75A /* GraphViewController.swift */,
+				51CC60931FB4443C003CC852 /* SelectParameters */,
+				51CC60941FB4445C003CC852 /* EditParameters */,
+				51CC60921FB4440E003CC852 /* Simulation */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -162,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				517F889F1FA09457006DC159 /* BackButton.swift */,
-				51EE202E1FA3716200A20C07 /* ChoosenParamsTableView.swift */,
+				51EE202E1FA3716200A20C07 /* EditParamsTableView.swift */,
 				51EE20301FA375A700A20C07 /* GraphView.swift */,
 				51E4B0A41FA708D900B35B90 /* MAButton.swift */,
 			);
@@ -320,11 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				517F88A01FA09457006DC159 /* BackButton.swift in Sources */,
-				51EE20331FA376F300A20C07 /* ChoosenParamsViewController.swift in Sources */,
-				51EE202F1FA3716200A20C07 /* ChoosenParamsTableView.swift in Sources */,
+				51EE20331FA376F300A20C07 /* EditParamsViewController.swift in Sources */,
+				51EE202F1FA3716200A20C07 /* EditParamsTableView.swift in Sources */,
 				519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */,
 				51519BB11F73D6EA009589FA /* Path.swift in Sources */,
-				518FF3A81F8B9A4100212741 /* SimulationViewController.swift in Sources */,
+				518FF3A81F8B9A4100212741 /* StartSimulationViewController.swift in Sources */,
+				51E9A97D1FB308910085310F /* OpenModelsViewController.swift in Sources */,
 				51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */,
 				51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */,
 				51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */,
@@ -339,6 +370,7 @@
 				51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */,
 				51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */,
 				51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */,
+				51CC60911FB43F76003CC852 /* SimulationViewController.swift in Sources */,
 				51519BB41F73DB48009589FA /* Utils.swift in Sources */,
 				518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */,
 			);

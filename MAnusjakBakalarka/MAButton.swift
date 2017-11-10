@@ -11,12 +11,18 @@ import UIKit
 class MAButton: UIButton {
 
     
-    init(title: String, color: UIColor, target: Any, action: Selector) {
+    init(title: String, color: UIColor, target: Any, action: Selector, rounded: Bool = true) {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
         self.backgroundColor = color
         self.addTarget(target, action: action, for: .touchUpInside)
+        
+        if rounded {
+            self.layer.borderColor = UIColor.white.cgColor
+            self.layer.borderWidth = 2
+            self.layer.cornerRadius = 8
+        }
         
         self.setupConstraints()
     }

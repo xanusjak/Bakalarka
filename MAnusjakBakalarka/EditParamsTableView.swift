@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChoosenParamsTableView: UITableView {
+class EditParamsTableView: UITableView {
     
     fileprivate var controller: BaseViewController!
     fileprivate var modelName: String!
@@ -65,7 +65,7 @@ class ChoosenParamsTableView: UITableView {
     }
 }
 
-extension ChoosenParamsTableView: UITableViewDataSource {
+extension EditParamsTableView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if blocks.count == 0 {
@@ -118,7 +118,7 @@ extension ChoosenParamsTableView: UITableViewDataSource {
 }
 
 
-extension ChoosenParamsTableView: UITableViewDelegate {
+extension EditParamsTableView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -133,7 +133,7 @@ extension ChoosenParamsTableView: UITableViewDelegate {
         if tableView.tag == 1 {
             if editingStyle == .delete {
                 
-                let tmpKey = Array(modelSelectedParams.keys)[indexPath.section]
+                let tmpKey = Array(modelSelectedParams.keys).sorted(by: <)[indexPath.section]
                 var block = modelSelectedParams[tmpKey] as! [String]
                 block.remove(at: indexPath.row)
                 
@@ -150,5 +150,12 @@ extension ChoosenParamsTableView: UITableViewDelegate {
                 self.reloadData()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if tableView.tag == 0 {
+            return false
+        }
+        return true
     }
 }

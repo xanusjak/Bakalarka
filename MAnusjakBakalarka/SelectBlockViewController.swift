@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseBlockViewController: BaseViewController {
+class SelectBlockViewController: BaseViewController {
 
     fileprivate var modelName: String!
     
@@ -43,7 +43,7 @@ class ChooseBlockViewController: BaseViewController {
     }
     
     override func setupTitle() {
-        self.title = "Blocks"
+        self.title = ""
     }
     
     override func setupLoadView() {
@@ -60,7 +60,7 @@ class ChooseBlockViewController: BaseViewController {
 }
 
 
-extension ChooseBlockViewController: UITableViewDataSource {
+extension SelectBlockViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -85,7 +85,7 @@ extension ChooseBlockViewController: UITableViewDataSource {
 }
 
 
-extension ChooseBlockViewController: UITableViewDelegate {
+extension SelectBlockViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -97,7 +97,7 @@ extension ChooseBlockViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = ChooseParamsViewController(modelName: modelName, blockName: blocks[indexPath.row], modelDict: modelDict)
+        let vc = SelectParamsViewController(modelName: modelName, blockName: blocks[indexPath.row], modelDict: modelDict)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

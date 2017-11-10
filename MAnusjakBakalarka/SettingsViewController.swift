@@ -27,7 +27,7 @@ class SettingsViewController: BaseViewController {
         return textField
     }()
     
-    fileprivate let saveButton = MAButton(title: "Done", color: .customBlueColor(), target: self, action: #selector(saveChangedIp))
+    fileprivate let saveButton = MAButton(title: "Done", color: .customBlueColor(), target: self, action: #selector(saveChangedIp), rounded: false)
     
     init(haveConnection: Bool) {
         super.init(nibName: nil, bundle: nil)

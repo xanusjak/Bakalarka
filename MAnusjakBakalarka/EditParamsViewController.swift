@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ChoosenParamsViewController: BaseViewController {
+class EditParamsViewController: BaseViewController {
 
     fileprivate var modelName: String!
     fileprivate var modelDict: [String:Any]!
     
-    fileprivate var tableView: ChoosenParamsTableView!
+    fileprivate var tableView: EditParamsTableView!
     
     init(modelName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -42,7 +42,7 @@ class ChoosenParamsViewController: BaseViewController {
     
     override func setupLoadView() {
         
-        tableView = ChoosenParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
+        tableView = EditParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
         tableView.tag = 1
         self.view.addSubview(tableView)
     }

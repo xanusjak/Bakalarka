@@ -101,7 +101,7 @@ class SimulationTableViewCell: UITableViewCell {
         field.text = value
         self.addSubview(field)
         
-        field.autoSetDimension(.width, toSize: 50)
+        field.autoSetDimension(.width, toSize: 100)
         field.autoPinEdgesToSuperviewEdges(with: .init(top: 10, left: 10, bottom: 10, right: 15), excludingEdge: .left)
         
         label.autoPinEdge(.right, to: .left, of: field, withOffset: -10)
@@ -125,7 +125,7 @@ class SimulationTableViewCell: UITableViewCell {
         self.addSubview(enumLabel)
         
         enumLabel.autoSetDimension(.width, toSize: 100)
-        enumLabel.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 0, bottom: 0, right: 5), excludingEdge: .left)
+        enumLabel.autoPinEdgesToSuperviewEdges(with: .init(top: 0, left: 0, bottom: 0, right: 15), excludingEdge: .left)
         
         label.autoPinEdge(.right, to: .left, of: enumLabel, withOffset: -10)
     }
@@ -158,15 +158,16 @@ extension SimulationTableViewCell: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let allowedCharacters = CharacterSet.decimalDigits
-        let characterSet = CharacterSet(charactersIn: string)
-        
-        if (allowedCharacters.isSuperset(of: characterSet)) {
-            return true
-        }
-        else {
-            return false
-        }
+//        let allowedCharacters = CharacterSet.decimalDigits
+//        let characterSet = CharacterSet(charactersIn: string)
+//
+//        if (allowedCharacters.isSuperset(of: characterSet)) {
+//            return true
+//        }
+//        else {
+//            return false
+//        }
+        return true
     }
 }
 

@@ -16,21 +16,15 @@ class ModelViewController: BaseViewController {
     
     fileprivate var chooseParamsButton = MAButton(title: "Select Parameters", color: .customBlueColor(), target: self, action: #selector(openChoseParamsVC))
     
-    fileprivate var choosenParamsButton = MAButton(title: "Edit Parameters", color: .customBlueColor(), target: self, action: #selector(openChoosenParams))
+    fileprivate var choosenParamsButton = MAButton(title: "Edit Parameters", color: .customBlueColor(), target: self, action: #selector(openChoosenParamsVC))
     
-    fileprivate var uploadButton = MAButton(title: "Upload Model", color: .customBlueColor(), target: self, action: #selector(uploadModel))
+    fileprivate var uploadButton = MAButton(title: "//TODO: Save", color: .customBlueColor(), target: self, action: #selector(uploadModel))
     
-    fileprivate var startSimButton = MAButton(title: "Start Simulation", color: .customGreenColor(), target: self, action: #selector(startSimulation))
-    
-    fileprivate var closeModelButton = MAButton(title: "Close Model", color: .customRedColor(), target: self, action: #selector(closeMatlabModel))
+    fileprivate var startSimButton = MAButton(title: "Simulation", color: .customBlueColor(), target: self, action: #selector(openSimulationVC))
     
     init(modelName: String) {
         super.init(nibName: nil, bundle: nil)
         self.modelName = modelName
-        
-        let dict = MatlabService.sharedClient.getModelInfo(modelName)
-        saveDictionary(dict: dict, forKey: modelName + "Dict") //TODO: do I need this?
-        self.modelDict = dict
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +34,8 @@ class ModelViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationItem.hidesBackButton = true
+        let dict = MatlabService.sharedClient.getModelInfo(modelName)
+        self.modelDict = dict
     }
     
     override func viewDidLoad() {
@@ -53,11 +48,13 @@ class ModelViewController: BaseViewController {
     
     override func setupLoadView() {
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "CLOSE", style: .done, target: self, action: #selector(closeMatlabModel))
+        self.navigationItem.rightBarButtonItem?.tintColor = .red
+        
         view.addSubview(chooseParamsButton)
         view.addSubview(choosenParamsButton)
         view.addSubview(startSimButton)
         view.addSubview(uploadButton)
-        view.addSubview(closeModelButton)
     }
     
     override func setupConstraints() {
@@ -77,8 +74,6 @@ class ModelViewController: BaseViewController {
         startSimButton.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
         startSimButton.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
         startSimButton.autoPinEdge(.top, to: .bottom, of: uploadButton, withOffset: 20)
-        
-        closeModelButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
 }
 
@@ -89,11 +84,12 @@ extension ModelViewController {
         self.navigationController?.pushViewController(ChooseBlockViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
-    @objc func openChoosenParams() {
-        self.navigationController?.pushViewController(ChoosenParamsViewController(modelName: modelName, modelDict: modelDict), animated: true)
+    @objc func openChoosenParamsVC() {
+        self.navigationController?.pushViewController(EditParamsViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
-    @objc func startSimulation() {
+    @objc func openSimulationVC() {
+        
         self.navigationController?.pushViewController(SimulationViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     

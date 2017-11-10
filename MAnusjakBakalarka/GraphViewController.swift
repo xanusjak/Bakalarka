@@ -11,7 +11,8 @@ import UIKit
 class GraphViewController: BaseViewController {
 
     fileprivate var modelName: String!
-    fileprivate var graphsView : GraphView!
+    
+    fileprivate var graphView: GraphView!
     
     fileprivate let backButton: BackButton! = {
         var button = BackButton()
@@ -49,15 +50,14 @@ class GraphViewController: BaseViewController {
     
     override func setupLoadView() {
         
-        graphsView = GraphView(modelName: modelName)
-        
-        self.view.addSubview(graphsView)
+        graphView = GraphView(modelName: modelName, withAnimation: false)
+        self.view.addSubview(graphView)
         self.view.addSubview(backButton)
     }
     
     override func setupConstraints() {
         
-        graphsView.autoPinEdgesToSuperviewEdges(with: .init(top: 50, left: 10, bottom: 0, right: 10))
+        graphView.autoPinEdgesToSuperviewEdges(with: .init(top: 50, left: 10, bottom: 0, right: 10))
         
         backButton.autoPinEdge(toSuperviewEdge: .top)
         backButton.autoPinEdge(toSuperviewEdge: .left)

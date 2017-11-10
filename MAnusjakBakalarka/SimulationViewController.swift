@@ -2,7 +2,7 @@
 //  SimulationViewController.swift
 //  MAnusjakBakalarka
 //
-//  Created by Milan Anusjak on 09/10/2017.
+//  Created by Milan Anusjak on 09/11/2017.
 //  Copyright © 2017 Milan Anusjak. All rights reserved.
 //
 
@@ -13,9 +13,7 @@ class SimulationViewController: BaseViewController {
     fileprivate var modelName: String!
     fileprivate var modelDict: [String:Any]!
     
-    fileprivate var tableView: ChoosenParamsTableView!
-    
-    fileprivate var graphView: GraphView!
+    fileprivate let startButton = MAButton(title: "Start Simulation", color: .customGreenColor(), target: self, action: #selector(startSimulation), rounded: false)
     
     init(modelName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -36,29 +34,41 @@ class SimulationViewController: BaseViewController {
     }
     
     override func setupLoadView() {
-        
-        graphView = GraphView(modelName: modelName)
-        graphView.layer.borderColor = UIColor.customBlueColor().cgColor
-        graphView.layer.borderWidth = 1.0
-        
-        tableView = ChoosenParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
-        self.view.addSubview(tableView)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(openGraphs))
-        graphView.addGestureRecognizer(tapGestureRecognizer)
-        self.view.addSubview(graphView)
+        self.view.addSubview(startButton)
     }
     
     override func setupConstraints() {
-        
-        tableView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
-        tableView.autoPinEdge(.bottom, to: .top, of: graphView, withOffset: 0)
-        
-        graphView.autoSetDimension(.height, toSize: UIScreen.main.bounds.size.height/2.5)
-        graphView.autoPinEdgesToSuperviewEdges(with: .init(top: 2, left: 2, bottom: 2, right: 2), excludingEdge: .top)
+        startButton.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
     }
     
-    @objc func openGraphs() {
-        self.navigationController?.pushViewController(GraphViewController(modelName: modelName), animated: true)
+    func getGraphData() -> [[Double]]{
+        let data = MatlabService.sharedClient.getScopeData(modelName)
+        var graphData = [[Double]]()
+        if let scope = data[modelName + "/Scope"] as? Dictionary<String,Any> {
+            if let arrays = scope["1.0"] as? [[Any]] {
+                for arr in arrays {
+                    let doubleValues = arr as! [Double]
+                    print("\n\nDOUBLE: \(doubleValues)")
+                    graphData.append(doubleValues)
+                }
+            }
+        }
+        return graphData
+    }
+    
+    @objc func startSimulation() {
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            
+            let alertController = SpinnerAlertViewController(title: " ", message: "Starting simulation...", preferredStyle: .alert)
+            self.present(alertController, animated: true, completion: nil)
+            
+            MatlabService.sharedClient.startSimulation(self.modelName)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                MatlabService.sharedClient.stopSimulation(self.modelName)
+                self.navigationController?.pushViewController(StartSimulationViewController(modelName: self.modelName, modelDict: self.modelDict), animated: true)
+                alertController.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
