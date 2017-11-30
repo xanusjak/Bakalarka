@@ -13,7 +13,7 @@ class SpinnerAlertViewController: UIAlertController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let spinner = UIActivityIndicatorView(frame: CGRect(x: 115, y: 20, width: 20, height: 20))
+        let spinner = UIActivityIndicatorView(frame: CGRect(x: 125, y: 20, width: 20, height: 20))
         spinner.color = .black
         spinner.startAnimating()
         

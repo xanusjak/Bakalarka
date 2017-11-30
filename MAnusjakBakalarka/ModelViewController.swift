@@ -34,8 +34,10 @@ class ModelViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let dict = MatlabService.sharedClient.getModelInfo(modelName)
-        self.modelDict = dict
+        DispatchQueue.global(qos: .userInitiated).async {
+            let dict = MatlabService.sharedClient.getModelInfo(self.modelName)
+            self.modelDict = dict
+        }
     }
     
     override func viewDidLoad() {

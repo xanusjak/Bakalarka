@@ -138,6 +138,21 @@ class MatlabService {
             return [:]
         }
     }
+    
+    func getGraphData(_ modelName: String) -> [[Double]]{
+        let data = getScopeData(modelName)
+        var graphData = [[Double]]()
+        if let scope = data[modelName + "/Scope"] as? Dictionary<String,Any> {
+            if let arrays = scope["1.0"] as? [[Any]] {
+                for arr in arrays {
+                    let doubleValues = arr as! [Double]
+                    print("\n\nDOUBLE: \(doubleValues)")
+                    graphData.append(doubleValues)
+                }
+            }
+        }
+        return graphData
+    }
 }
 
 extension MatlabService {

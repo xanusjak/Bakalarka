@@ -55,7 +55,7 @@ class EditParamsTableView: UITableView {
     }
     
     func loadTableData() {
-        modelSelectedParams = getDictionary(forKey: "\(modelName)SelectedParams")
+        modelSelectedParams = getDictionary(forKey: "\(self.modelName as String)SelectedParams")
         if modelSelectedParams != nil {
             blocks = Array(modelSelectedParams.keys).sorted(by: <)
         }
@@ -144,7 +144,7 @@ extension EditParamsTableView: UITableViewDelegate {
                     modelSelectedParams.removeValue(forKey: tmpKey)
                 }
             
-                saveDictionary(dict: modelSelectedParams, forKey: "\(modelName)SelectedParams")
+                saveDictionary(dict: modelSelectedParams, forKey: "\(modelName as String)SelectedParams")
                 print(modelSelectedParams as Any)
                 self.loadTableData()
                 self.reloadData()

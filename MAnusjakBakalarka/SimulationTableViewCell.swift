@@ -31,7 +31,7 @@ class SimulationTableViewCell: UITableViewCell {
     fileprivate let switcher: UISwitch! = {
         var switcher = UISwitch()
         switcher.isOn = true
-        switcher.onTintColor = UIColor.customBlueColor()
+        switcher.onTintColor = .customBlueColor()
         return switcher
     }()
     

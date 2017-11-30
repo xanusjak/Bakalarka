@@ -29,9 +29,9 @@ class StartViewController: BaseViewController {
         return label
     }()
     
-    fileprivate let openModelButton = MAButton(title: "Open Model", color: .customBlueColor(), target: self, action: #selector(openMatlabModel))
+    fileprivate let openModelButton = MAButton(title: "Open model", color: .customBlueColor(), target: self, action: #selector(openMatlabModel))
     
-    fileprivate let showOpenModelsButton = MAButton(title: "Show open Models", color: .customBlueColor(), target: self, action: #selector(openModelsVC))
+    fileprivate let showOpenModelsButton = MAButton(title: "Show open models", color: .customBlueColor(), target: self, action: #selector(openModelsVC))
     
     fileprivate let uploadButton = MAButton(title: "TODO:// Upload", color: .customBlueColor(), target: self, action: #selector(stopMatlabAdapter))
     
@@ -66,7 +66,7 @@ class StartViewController: BaseViewController {
 
         if MatlabService.sharedClient.isMatlabRuning() {
             
-            modelsList = MatlabService.sharedClient.getModels()
+            modelsList = MatlabService.sharedClient.getModels().sorted(by: <)
             
             startMatlabButton.isHidden = true
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "STOP", style: .done, target: self, action: #selector(stopMatlabAdapter))
@@ -135,6 +135,7 @@ extension StartViewController {
         for enumString in modelsList {
             let choise = UIAlertAction(title: enumString, style: .default) {
                 _ in
+                
                 self.modelName = enumString
                 
                 let alertController = SpinnerAlertViewController(title: " ", message: "Opening \(self.modelName as String)...", preferredStyle: .alert)
@@ -163,7 +164,7 @@ extension StartViewController {
         
         let alertController = SpinnerAlertViewController(title: " ", message: "Checking...", preferredStyle: .alert)
         self.present(alertController, animated: true, completion: nil)
-         openModels.removeAll()
+        openModels.removeAll()
         
         DispatchQueue.global(qos: .userInitiated).async {
             

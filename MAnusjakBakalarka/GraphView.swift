@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ScrollableGraphView
+import Charts
 
 class GraphView: UIView {
     
@@ -16,14 +16,14 @@ class GraphView: UIView {
     fileprivate var animation: Bool!
     fileprivate var pointsNumber: Int = 0
     
-    fileprivate var graph: ScrollableGraphView!
+    fileprivate var chartView = LineChartView()
     
     init(modelName: String, withAnimation: Bool) {
         super.init(frame: .zero)
         self.modelName = modelName
         self.animation = withAnimation
         
-        self.graphData = getGraphData()
+        self.graphData = MatlabService.sharedClient.getGraphData(modelName)
         
         setupView()
         setupConstraints()
@@ -35,110 +35,73 @@ class GraphView: UIView {
     
     func setupView() {
         
-        graph = createGraph(.zero)
-        self.addSubview(graph)
-    }
-    
-    fileprivate func createGraph(_ frame: CGRect) -> ScrollableGraphView {
+        createGraph()
         
-        //TODO:
-        let graphView = ScrollableGraphView(frame: frame, dataSource: self)
-
-        if graphData.count > 0 {
-            pointsNumber = graphData[0].count
-            
-            // Setup the reference lines.
-            let referenceLines = ReferenceLines()
-
-            referenceLines.referenceLineLabelFont = UIFont.boldSystemFont(ofSize: 8)
-            referenceLines.referenceLineColor = UIColor.black.withAlphaComponent(0.2)
-            referenceLines.referenceLineLabelColor = UIColor.black
-            referenceLines.referenceLineNumberOfDecimalPlaces = 1
-            referenceLines.referenceLineNumberStyle = .decimal
-//            referenceLines.relativePositions = [0.2, 0.4, 0.6, 0.8, 1]
-
-            referenceLines.dataPointLabelColor = UIColor.black.withAlphaComponent(1)
-            
-            //Add to the graph.
-            graphView.addReferenceLines(referenceLines: referenceLines)
-
-            // Setup the graph
-            graphView.backgroundFillColor = UIColor.white
-
-            graphView.dataPointSpacing = 3
-            graphView.rangeMax = (graphData[1].max()?.rounded())!
-
-//            graphView.shouldAnimateOnStartup = true
-//            graphView.shouldAdaptRange = true
-            graphView.shouldRangeAlwaysStartAtZero = true
-
-            //Add plots
-            for index in 1..<graphData.count {
-                
-                let plot = LinePlot(identifier: "plot\(index)")
-                plot.lineColor = UIColor.getRandomColor(index: index)
-//                plot.adaptAnimationType = ScrollableGraphViewAnimationType.elastic
-//                plot.animationDuration = 1
-                
-                graphView.addPlot(plot: plot)
-            }
-        }
-       
-        return graphView
+        self.addSubview(chartView)
     }
     
     func setupConstraints() {
-        graph.autoPinEdgesToSuperviewEdges()
+        chartView.autoPinEdgesToSuperviewEdges()
     }
     
-    func getGraphData() -> [[Double]]{
-        let data = MatlabService.sharedClient.getScopeData(modelName)
-        var graphData = [[Double]]()
-        if let scope = data[modelName + "/Scope"] as? Dictionary<String,Any> {
-            if let arrays = scope["1.0"] as? [[Any]] {
-                for arr in arrays {
-                    let doubleValues = arr as! [Double]
-                    print("\n\nDOUBLE: \(doubleValues)")
-                    graphData.append(doubleValues)
-                }
+    fileprivate func createGraph() {
+        
+        chartView.delegate = self
+        
+        chartView.chartDescription?.enabled = false
+        chartView.dragEnabled = true
+        chartView.setScaleEnabled(true)
+        chartView.pinchZoomEnabled = true
+        
+        chartView.minOffset = 2
+        chartView.borderColor = .gray
+        
+        setData()
+    }
+    
+    func setData() {
+        
+        let dataSets = (1..<graphData.count).map { i -> LineChartDataSet in
+            
+            let values = (0..<graphData[i].count).map { (j) -> ChartDataEntry in
+                return ChartDataEntry(x: graphData[0][j], y: graphData[i][j], icon: nil)
             }
+            
+            let set = LineChartDataSet(values: values, label: "DataSet \(i)")
+            set.lineWidth = 1.5
+            set.circleRadius = 0
+            set.circleHoleRadius = 0
+            
+            set.setColor(UIColor.getRandomColor(index: i))
+            set.setCircleColor(UIColor.getRandomColor(index: i))
+            
+            return set
         }
-        return graphData
+        
+        
+        let data = LineChartData(dataSets: dataSets)
+        data.setValueFont(.systemFont(ofSize: 7, weight: .light))
+        chartView.data = data
+    }
+
+}
+
+extension GraphView : ChartViewDelegate {
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        NSLog("chartValueSelected");
+    }
+    
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        NSLog("chartValueNothingSelected");
+    }
+    
+    func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat) {
+        
+    }
+    
+    func chartTranslated(_ chartView: ChartViewBase, dX: CGFloat, dY: CGFloat) {
+        
     }
 }
 
-extension GraphView: ScrollableGraphViewDataSource {
-    func value(forPlot plot: Plot, atIndex pointIndex: Int) -> Double {
-        
-        switch plot.identifier {
-            case "plot1":
-                return graphData[1][pointIndex]
-            case "plot2":
-                return graphData[2][pointIndex]
-            case "plot3":
-                return graphData[3][pointIndex]
-            case "plot4":
-                return graphData[4][pointIndex]
-            case "plot5":
-                return graphData[5][pointIndex]
-            case "plot6":
-                return graphData[6][pointIndex]
-            case "plot7":
-                return graphData[7][pointIndex]
-            
-            default:
-                return 0
-        }
-    }
-    
-    func label(atIndex pointIndex: Int) -> String {
-        if (pointIndex%25 == 0) {
-            return String(graphData[0][pointIndex])
-        }
-        return ""
-    }
-    
-    func numberOfPoints() -> Int {
-        return pointsNumber
-    }
-}
