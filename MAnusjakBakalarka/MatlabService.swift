@@ -23,7 +23,7 @@ class MatlabService {
         }
     }
     
-    // Check IP
+    /// Check IP
     func checkIpPing() -> Bool {
         
         if (callService(urlString: Path.ip + Path.ping) == "pong") {
@@ -36,7 +36,7 @@ class MatlabService {
         }
     }
     
-    // Check is Matlab running
+    /// Check is Matlab running
     func isMatlabRuning() -> Bool {
         
         if (callService(urlString: Path.ip + Path.isMatlabRunning) == "true") {
@@ -49,7 +49,7 @@ class MatlabService {
         }
     }
     
-    // Check is Model opened
+    /// Check is Model opened
     func isModelOpened(modelName: String) -> Bool {
         
         if (callService(urlString: Path.ip + Path.isModelOpened + modelName) == "true") {
@@ -62,19 +62,19 @@ class MatlabService {
         }
     }
     
-    // Start Matlab
+    /// Start Matlab
     func startMatlab() {
         print("startMatlab")
         _ = callService(urlString: Path.ip + Path.startMatlab)
     }
     
-    // Stop Matlab
+    /// Stop Matlab
     func stopMatlab() {
         print("stopMatlab")
         _ = callService(urlString: Path.ip + Path.stopMatlab)
     }
     
-    // Get all models
+    /// Get all models
     func getModels() -> Array<String>{
         
         let string = callService(urlString: Path.ip + Path.getModels)
@@ -88,19 +88,19 @@ class MatlabService {
         return models
     }
     
-    // Open Model
+    /// Open Model
     func openModel(_ modelName: String) {
         print("openModel: " + Path.ip + Path.openModel + modelName)
         _ = callService(urlString: Path.ip + Path.openModel + modelName)
     }
     
-    // Close Model
+    /// Close Model
     func closeModel(_ modelName: String) {
         print("closeModel: " + Path.ip + Path.openModel + modelName)
         _ = callService(urlString: Path.ip + Path.closeModel + modelName)
     }
     
-    // Get Model information
+    /// Get Model information
     func getModelInfo(_ modelName: String) -> [String:Any] {
         let JSONString = callService(urlString: Path.ip + Path.getModelInfo + modelName)
         
@@ -114,13 +114,13 @@ class MatlabService {
         }
     }
     
-    // Start Simulation
+    /// Start Simulation
     func startSimulation(_ modelName: String) {
         print("startSimulation")
         _ = callService(urlString: Path.ip + Path.startSimulation + modelName)
     }
     
-    // Stop Simulation
+    /// Stop Simulation
     func stopSimulation(_ modelName: String) {
         print("stopSimulation")
         _ = callService(urlString: Path.ip + Path.stopSimulation + modelName)
@@ -139,6 +139,7 @@ class MatlabService {
         }
     }
     
+    /// Get Graph Data
     func getGraphData(_ modelName: String) -> [[Double]]{
         let data = getScopeData(modelName)
         var graphData = [[Double]]()

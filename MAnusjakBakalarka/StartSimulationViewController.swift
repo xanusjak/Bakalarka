@@ -14,9 +14,17 @@ class StartSimulationViewController: BaseViewController {
     fileprivate var modelDict: [String:Any]!
     fileprivate var graphData: [[Double]]!
     
-    fileprivate var tableView: EditParamsTableView!
+    open var graphView: GraphView!
     
-    fileprivate var graphView: GraphView!
+    fileprivate let backButton: BackButton! = {
+        var button = BackButton()
+        button.addTarget(self, action: #selector(popViewController), for: .touchUpInside)
+        return button
+    }()
+    
+    fileprivate let startSimulationButton = MAButton(title: "Start Simulation", color: .customGreenColor(), target: self, action: #selector(startSimulation))
+    
+    fileprivate let stopSimulationButton = MAButton(title: "Stop Simulation", color: .customRedColor(), target: self, action: #selector(stopSimulation))
     
     init(modelName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -28,8 +36,14 @@ class StartSimulationViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        self.view.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
     }
     
     override func setupTitle() {
@@ -38,29 +52,64 @@ class StartSimulationViewController: BaseViewController {
     
     override func setupLoadView() {
         
-        graphView = GraphView(modelName: modelName, withAnimation: true)
-        graphView.layer.borderColor = UIColor.customBlueColor().cgColor
-        graphView.layer.borderWidth = 1.0
+        self.view.addSubview(backButton)
+        self.view.addSubview(startSimulationButton)
         
-        tableView = EditParamsTableView(modelName: modelName, modelDict: modelDict, viewController: self)
-        tableView.tag = 0
-        self.view.addSubview(tableView)
+        stopSimulationButton.isHidden = true
+        self.view.addSubview(stopSimulationButton)
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(openGraph))
-        graphView.addGestureRecognizer(tapGestureRecognizer)
+        graphView = GraphView(modelName: modelName)
         self.view.addSubview(graphView)
     }
     
     override func setupConstraints() {
         
-        tableView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
-        tableView.autoPinEdge(.bottom, to: .top, of: graphView, withOffset: 0)
+        backButton.autoPinEdge(toSuperviewEdge: .top)
+        backButton.autoPinEdge(toSuperviewEdge: .left)
         
-        graphView.autoSetDimension(.height, toSize: UIScreen.main.bounds.size.height/2.5)
-        graphView.autoPinEdgesToSuperviewEdges(with: .init(top: 2, left: 2, bottom: 2, right: 2), excludingEdge: .top)
+        startSimulationButton.autoSetDimensions(to: CGSize(width: 150, height: 30))
+        startSimulationButton.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
+        startSimulationButton.autoPinEdge(toSuperviewEdge: .right, withInset: 10)
+        
+        stopSimulationButton.autoSetDimensions(to: CGSize(width: 150, height: 30))
+        stopSimulationButton.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
+        stopSimulationButton.autoPinEdge(toSuperviewEdge: .right, withInset: 10)
+
+        graphView.autoPinEdgesToSuperviewEdges(with: .init(top: 50, left: 10, bottom: 10, right: 10))
     }
     
-    @objc func openGraph() {
-        self.navigationController?.pushViewController(GraphViewController(modelName: modelName), animated: true)
+    @objc func startSimulation() {
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            MatlabService.sharedClient.startSimulation(self.modelName)
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.graphView.setupDataTimer()
+            }
+        }
+        
+        startSimulationButton.isHidden = true
+        
+        stopSimulationButton.isHidden = false
+        backButton.isEnabled = false
+    }
+    
+    @objc func stopSimulation() {
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            MatlabService.sharedClient.stopSimulation(self.modelName)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.graphView.timer.invalidate()
+            }
+        }
+        
+        startSimulationButton.isHidden = false
+        
+        stopSimulationButton.isHidden = true
+        backButton.isEnabled = true
+    }
+    
+    @objc func popViewController() {
+        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.isNavigationBarHidden = false
     }
 }

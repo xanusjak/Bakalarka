@@ -72,6 +72,10 @@ extension EditParamsTableView: UITableViewDataSource {
             self.backgroundView  = noChoosenLabel
             self.separatorStyle = .none
         }
+        else {
+            self.backgroundView  = nil
+            self.separatorStyle = .singleLine
+        }
         return blocks.count
     }
     

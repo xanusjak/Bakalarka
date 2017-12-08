@@ -13,15 +13,13 @@
 		51519BB41F73DB48009589FA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51519BB31F73DB48009589FA /* Utils.swift */; };
 		517F88A01FA09457006DC159 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F889F1FA09457006DC159 /* BackButton.swift */; };
 		518FF3A81F8B9A4100212741 /* StartSimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */; };
-		518FF3AA1F8B9AAA00212741 /* ChooseBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */; };
-		518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */; };
+		518FF3AA1F8B9AAA00212741 /* SelectBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3A91F8B9AAA00212741 /* SelectBlockViewController.swift */; };
+		518FF3AC1F8CC85200212741 /* SelectParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AB1F8CC85200212741 /* SelectParamsViewController.swift */; };
 		518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */; };
 		518FF3B01F8D61A000212741 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AF1F8D61A000212741 /* SettingsViewController.swift */; };
 		519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */; };
-		519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71B11F9F76C3000FF75A /* GraphViewController.swift */; };
 		51B38B9C1FCEBC38002AC713 /* SavedParamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B38B9B1FCEBC38002AC713 /* SavedParamsTableViewController.swift */; };
 		51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9D1971F74207200541580 /* UIColor+Extension.swift */; };
-		51CC60911FB43F76003CC852 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC60901FB43F76003CC852 /* SimulationViewController.swift */; };
 		51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4B0A41FA708D900B35B90 /* MAButton.swift */; };
 		51E9A97D1FB308910085310F /* OpenModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9A97C1FB308910085310F /* OpenModelsViewController.swift */; };
 		51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */; };
@@ -44,15 +42,13 @@
 		51519BB31F73DB48009589FA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		517F889F1FA09457006DC159 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSimulationViewController.swift; sourceTree = "<group>"; };
-		518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBlockViewController.swift; sourceTree = "<group>"; };
-		518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseParamsViewController.swift; sourceTree = "<group>"; };
+		518FF3A91F8B9AAA00212741 /* SelectBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBlockViewController.swift; sourceTree = "<group>"; };
+		518FF3AB1F8CC85200212741 /* SelectParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectParamsViewController.swift; sourceTree = "<group>"; };
 		518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		518FF3AF1F8D61A000212741 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
-		519D71B11F9F76C3000FF75A /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		51B38B9B1FCEBC38002AC713 /* SavedParamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedParamsTableViewController.swift; sourceTree = "<group>"; };
 		51C9D1971F74207200541580 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		51CC60901FB43F76003CC852 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
 		51D91C201FA6519D00405FB1 /* MAnusjakBakalarka-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAnusjakBakalarka-Bridging-Header.h"; sourceTree = "<group>"; };
 		51E4B0A41FA708D900B35B90 /* MAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAButton.swift; sourceTree = "<group>"; };
 		51E9A97C1FB308910085310F /* OpenModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenModelsViewController.swift; sourceTree = "<group>"; };
@@ -116,9 +112,7 @@
 		51CC60921FB4440E003CC852 /* Simulation */ = {
 			isa = PBXGroup;
 			children = (
-				51CC60901FB43F76003CC852 /* SimulationViewController.swift */,
 				518FF3A71F8B9A4100212741 /* StartSimulationViewController.swift */,
-				519D71B11F9F76C3000FF75A /* GraphViewController.swift */,
 			);
 			name = Simulation;
 			sourceTree = "<group>";
@@ -126,8 +120,8 @@
 		51CC60931FB4443C003CC852 /* SelectParameters */ = {
 			isa = PBXGroup;
 			children = (
-				518FF3A91F8B9AAA00212741 /* ChooseBlockViewController.swift */,
-				518FF3AB1F8CC85200212741 /* ChooseParamsViewController.swift */,
+				518FF3A91F8B9AAA00212741 /* SelectBlockViewController.swift */,
+				518FF3AB1F8CC85200212741 /* SelectParamsViewController.swift */,
 			);
 			name = SelectParameters;
 			sourceTree = "<group>";
@@ -366,9 +360,8 @@
 				51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */,
 				51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */,
 				518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */,
-				519D71B21F9F76C3000FF75A /* GraphViewController.swift in Sources */,
 				51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */,
-				518FF3AA1F8B9AAA00212741 /* ChooseBlockViewController.swift in Sources */,
+				518FF3AA1F8B9AAA00212741 /* SelectBlockViewController.swift in Sources */,
 				518FF3B01F8D61A000212741 /* SettingsViewController.swift in Sources */,
 				51FA77E61F8596A40035D701 /* ModelViewController.swift in Sources */,
 				511617D81F828D050036B386 /* SpinnerAlertViewController.swift in Sources */,
@@ -376,9 +369,8 @@
 				51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */,
 				51FA77E41F8587A90035D701 /* MatlabService.swift in Sources */,
 				51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */,
-				51CC60911FB43F76003CC852 /* SimulationViewController.swift in Sources */,
 				51519BB41F73DB48009589FA /* Utils.swift in Sources */,
-				518FF3AC1F8CC85200212741 /* ChooseParamsViewController.swift in Sources */,
+				518FF3AC1F8CC85200212741 /* SelectParamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +507,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -536,6 +529,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "MAnusjakBakalarka/MAnusjakBakalarka-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

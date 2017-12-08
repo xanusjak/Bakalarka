@@ -11,19 +11,16 @@ import Charts
 
 class GraphView: UIView {
     
+    open var timer: Timer!
+    
     fileprivate var modelName: String!
-    fileprivate var graphData = [[Double]]()
-    fileprivate var animation: Bool!
-    fileprivate var pointsNumber: Int = 0
+    fileprivate var graphData: [[Double]]!
     
     fileprivate var chartView = LineChartView()
     
-    init(modelName: String, withAnimation: Bool) {
+    init(modelName: String) {
         super.init(frame: .zero)
         self.modelName = modelName
-        self.animation = withAnimation
-        
-        self.graphData = MatlabService.sharedClient.getGraphData(modelName)
         
         setupView()
         setupConstraints()
@@ -53,10 +50,17 @@ class GraphView: UIView {
         chartView.setScaleEnabled(true)
         chartView.pinchZoomEnabled = true
         
-        chartView.minOffset = 2
+        chartView.legend.horizontalAlignment = .right
+        chartView.legend.verticalAlignment = .top
+        chartView.legend.enabled = false
+        
+        chartView.xAxis.labelPosition = .bottom
+        chartView.rightAxis.enabled = false
+        
         chartView.borderColor = .gray
         
-        setData()
+        chartView.xAxis.axisMinimum = 0
+        
     }
     
     func setData() {
@@ -67,7 +71,7 @@ class GraphView: UIView {
                 return ChartDataEntry(x: graphData[0][j], y: graphData[i][j], icon: nil)
             }
             
-            let set = LineChartDataSet(values: values, label: "DataSet \(i)")
+            let set = LineChartDataSet(values: values, label: nil)
             set.lineWidth = 1.5
             set.circleRadius = 0
             set.circleHoleRadius = 0
@@ -81,7 +85,33 @@ class GraphView: UIView {
         
         let data = LineChartData(dataSets: dataSets)
         data.setValueFont(.systemFont(ofSize: 7, weight: .light))
+        
         chartView.data = data
+        
+        chartView.setVisibleXRangeMaximum(2)
+        chartView.moveViewToX(Double(graphData[0].count - 3))
+    }
+    
+    open func setupDataTimer(){
+        
+        graphData = [[Double]]()
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.getData), userInfo: nil, repeats: true)
+    }
+    
+    @objc func getData() {
+        
+        let data = MatlabService.sharedClient.getGraphData(modelName)
+        
+        for i in 0..<data.count {
+            if graphData.indices.contains(i) {
+                graphData[i].append(contentsOf: data[i])
+            }
+            else {
+                graphData.append(data[i])
+            }
+        }
+        
+        setData()
     }
 
 }

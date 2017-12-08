@@ -31,7 +31,7 @@ class SelectParamsViewController: BaseViewController {
         return table
     }()
     
-    fileprivate let saveButton = MAButton(title: "Save", color: .customBlueColor(), target: self, action: #selector(saveSelectedParameters))
+    fileprivate let saveButton = MAButton(title: "Done", color: .customBlueColor(), target: self, action: #selector(saveSelectedParameters), rounded: false)
     
     init(modelName: String, blockName: String, modelDict: [String:Any]) {
         super.init(nibName: nil, bundle: nil)
@@ -43,6 +43,11 @@ class SelectParamsViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.hidesBackButton = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +56,7 @@ class SelectParamsViewController: BaseViewController {
     
     func loadModelSelectedParams() {
         
-        if let dict = getDictionary(forKey: "\(modelName)SelectedParams") {
+        if let dict = getDictionary(forKey: "\(self.modelName as String)SelectedParams") {
             modelSelectedParams = dict
         }
         else {
@@ -100,7 +105,7 @@ class SelectParamsViewController: BaseViewController {
         if !(selectedParams.count > 0) {
             modelSelectedParams.removeValue(forKey: blockName)
         }
-        saveDictionary(dict: modelSelectedParams, forKey: "\(modelName)SelectedParams")
+        saveDictionary(dict: modelSelectedParams, forKey: "\(modelName as String)SelectedParams")
         
         self.navigationController?.popViewController(animated: true)
     }

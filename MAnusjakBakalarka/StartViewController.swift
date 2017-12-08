@@ -40,7 +40,6 @@ class StartViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .done, target: self, action: #selector(openSettings))
         self.checkMatlabStatus()
     }
     
@@ -72,6 +71,7 @@ class StartViewController: BaseViewController {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "STOP", style: .done, target: self, action: #selector(stopMatlabAdapter))
             self.navigationItem.rightBarButtonItem?.tintColor = .red
             
+            self.navigationItem.leftBarButtonItem = nil
             uploadButton.isHidden = false
             openModelButton.isHidden = false
             showOpenModelsButton.isHidden = false
@@ -82,6 +82,7 @@ class StartViewController: BaseViewController {
             startMatlabButton.isHidden = false
             self.navigationItem.rightBarButtonItem = nil
             
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "settings"), style: .done, target: self, action: #selector(openSettings))
             uploadButton.isHidden = true
             openModelButton.isHidden = true
             showOpenModelsButton.isHidden = true
@@ -118,14 +119,13 @@ class StartViewController: BaseViewController {
 extension StartViewController {
     
     @objc func openSettings() {
-        if MatlabService.sharedClient.isMatlabRuning() {
-            let alert = UIAlertController(title: "Stop Matlab", message: "To change settings.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
+//        if MatlabService.sharedClient.isMatlabRuning() {
+//            let alert = UIAlertController(title: "Stop Matlab", message: "To change settings.", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//        else {
             self.navigationController?.pushViewController(SettingsViewController(haveConnection: true), animated: true)
-        }
     }
     
     @objc func openMatlabModel() {

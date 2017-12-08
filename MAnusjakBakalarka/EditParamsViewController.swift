@@ -71,38 +71,47 @@ class EditParamsViewController: BaseViewController {
     }
     
     @objc func saveCombination() {
-        alertController = UIAlertController(title: nil, message: "Save as:", preferredStyle: .alert)
         
-        let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
-            if let combinationName = self.alertController.textFields![0].text {
-                
-                if let dict = getDictionary(forKey: "\(self.modelName as String)SavedCombinations") {
-                    self.savedCombinations = dict
+        if tableView.visibleCells.count == 0 {
+            let alert = UIAlertController(title: nil, message: "Select parameters", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
+        }
+        else {
+            alertController = UIAlertController(title: nil, message: "Save as:", preferredStyle: .alert)
+        
+            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
+                if let combinationName = self.alertController.textFields![0].text {
+                    
+                    if let dict = getDictionary(forKey: "\(self.modelName as String)SavedCombinations") {
+                        self.savedCombinations = dict
+                    }
+                    else {
+                        self.savedCombinations = [String:Any]()
+                    }
+                    
+                    let modelSelectedParams = getDictionary(forKey: "\(self.modelName as String)SelectedParams") as Any
+                    self.savedCombinations[combinationName] = modelSelectedParams
+                    
+                    saveDictionary(dict: self.savedCombinations, forKey: "\(self.modelName as String)SavedCombinations")
                 }
-                else {
-                    self.savedCombinations = [String:Any]()
-                }
-                
-                let modelSelectedParams = getDictionary(forKey: "\(self.modelName as String)SelectedParams") as Any
-                self.savedCombinations[combinationName] = modelSelectedParams
-                
-                saveDictionary(dict: self.savedCombinations, forKey: "\(self.modelName as String)SavedCombinations")
             }
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+            
+            alertController.addTextField { (textField) in
+                textField.delegate = self
+                textField.placeholder = "Combination name"
+            }
+            
+            alertController.addAction(confirmAction)
+            alertController.actions[0].isEnabled = false
+            
+            alertController.addAction(cancelAction)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
-        
-        alertController.addTextField { (textField) in
-            textField.delegate = self
-            textField.placeholder = "Combination name"
-        }
-        
-        alertController.addAction(confirmAction)
-        alertController.actions[0].isEnabled = false
-        
-        alertController.addAction(cancelAction)
-        
-        self.present(alertController, animated: true, completion: nil)
     }
 }
 

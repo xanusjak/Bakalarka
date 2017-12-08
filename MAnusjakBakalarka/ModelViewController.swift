@@ -50,6 +50,8 @@ class ModelViewController: BaseViewController {
     
     override func setupLoadView() {
         
+        self.navigationItem.leftBarButtonItem?.action = #selector(popToRootVC)
+        //UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(popToRootVC))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "CLOSE", style: .done, target: self, action: #selector(closeMatlabModel))
         self.navigationItem.rightBarButtonItem?.tintColor = .red
         
@@ -82,8 +84,12 @@ class ModelViewController: BaseViewController {
 //BUTTONS ACTIONS
 extension ModelViewController {
     
+    @objc func popToRootVC() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     @objc func openChoseParamsVC() {
-        self.navigationController?.pushViewController(ChooseBlockViewController(modelName: modelName, modelDict: modelDict), animated: true)
+        self.navigationController?.pushViewController(SelectBlockViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
     @objc func openChoosenParamsVC() {
@@ -92,7 +98,7 @@ extension ModelViewController {
     
     @objc func openSimulationVC() {
         
-        self.navigationController?.pushViewController(SimulationViewController(modelName: modelName, modelDict: modelDict), animated: true)
+        self.navigationController?.pushViewController(StartSimulationViewController(modelName: modelName, modelDict: modelDict), animated: true)
     }
     
     @objc func uploadModel() {

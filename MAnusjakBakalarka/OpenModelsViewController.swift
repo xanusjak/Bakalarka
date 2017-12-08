@@ -59,9 +59,20 @@ class OpenModelsViewController: BaseViewController {
                 self.view.addSubview(button)
                 
                 button.autoSetDimension(.height, toSize: 70)
-                button.autoPinEdge(toSuperviewEdge: .left, withInset: 15)
-                button.autoPinEdge(toSuperviewEdge: .right, withInset: 15)
-                button.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(20 + index*90))
+                button.autoPinEdge(toSuperviewEdge: .left, withInset: 20)
+                button.autoPinEdge(toSuperviewEdge: .right, withInset: 20)
+                button.autoPinEdge(toSuperviewEdge: .top, withInset: CGFloat(30 + index*100))
+                
+                let closeButton = UIButton()
+                closeButton.addTarget(self, action: #selector(closeModel(_:)), for: .touchUpInside)
+                closeButton.setImage(#imageLiteral(resourceName: "close"), for: .normal)
+                closeButton.tag = index
+                
+                self.view.addSubview(closeButton)
+                
+                closeButton.autoSetDimensions(to: CGSize(width: 25, height: 25))
+                closeButton.autoPinEdge(.bottom, to: .top, of: button)
+                closeButton.autoPinEdge(.right, to: .right, of: button)
             }
         }
     }
@@ -78,5 +89,33 @@ class OpenModelsViewController: BaseViewController {
         if let modelName = sender.titleLabel!.text {
             self.navigationController?.pushViewController(ModelViewController(modelName: modelName), animated: true)
         }
+    }
+    
+    @objc func closeModel(_ sender: UIButton) {
+        
+        let modelName = openModels[sender.tag]
+            
+        let alert = UIAlertController(title: nil, message: "Close model?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+            (alert: UIAlertAction!) in
+            
+            let alertController = SpinnerAlertViewController(title: " ", message: "Closing model...", preferredStyle: .alert)
+            self.present(alertController, animated: true, completion: nil)
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                MatlabService.sharedClient.closeModel(modelName)
+                DispatchQueue.main.async {
+                    alertController.dismiss(animated: true, completion:  {
+                        self.navigationController?.popToRootViewController(animated: true)
+                    })
+                }
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
 }

@@ -43,7 +43,7 @@ class SelectBlockViewController: BaseViewController {
     }
     
     override func setupTitle() {
-        self.title = ""
+        self.title = "Blocks"
     }
     
     override func setupLoadView() {

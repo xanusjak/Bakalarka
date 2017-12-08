@@ -114,7 +114,7 @@ class SimulationTableViewCell: UITableViewCell {
         
         switcher.autoPinEdgesToSuperviewEdges(with: .init(top: 10, left: 0, bottom: 10, right: 15), excludingEdge: .left)
         
-        label.autoPinEdge(.right, to: .left, of: switcher, withOffset: -25)
+        label.autoPinEdge(.right, to: .left, of: switcher, withOffset: -30)
     }
     
     func setupEnumLabel(value: String) {
