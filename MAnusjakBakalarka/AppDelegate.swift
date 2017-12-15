@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("\(key) = \(value) \n")
         }
         
-        
         self.setupAppeareance()
         
         let navController = UINavigationController(rootViewController: StartViewController())

@@ -19,7 +19,7 @@ class MAButton: UIButton {
         self.addTarget(target, action: action, for: .touchUpInside)
         
         if rounded {
-            self.layer.borderColor = UIColor.white.cgColor
+            self.layer.borderColor = color.cgColor
             self.layer.borderWidth = 2
             self.layer.cornerRadius = 8
         }

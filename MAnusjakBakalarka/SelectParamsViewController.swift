@@ -129,7 +129,6 @@ extension SelectParamsViewController: UITableViewDataSource {
                 }
             }
         }
-    
         return cell
     }
     

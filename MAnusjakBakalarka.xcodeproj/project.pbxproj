@@ -17,13 +17,12 @@
 		518FF3AC1F8CC85200212741 /* SelectParamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AB1F8CC85200212741 /* SelectParamsViewController.swift */; };
 		518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */; };
 		518FF3B01F8D61A000212741 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518FF3AF1F8D61A000212741 /* SettingsViewController.swift */; };
-		519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */; };
+		519D71AE1F963449000FF75A /* EditParamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519D71AD1F963449000FF75A /* EditParamCell.swift */; };
 		51B38B9C1FCEBC38002AC713 /* SavedParamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B38B9B1FCEBC38002AC713 /* SavedParamsTableViewController.swift */; };
 		51C9D1981F74207200541580 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9D1971F74207200541580 /* UIColor+Extension.swift */; };
 		51E4B0A51FA708D900B35B90 /* MAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4B0A41FA708D900B35B90 /* MAButton.swift */; };
 		51E9A97D1FB308910085310F /* OpenModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9A97C1FB308910085310F /* OpenModelsViewController.swift */; };
 		51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */; };
-		51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC2DD1F70F7BE00303C77 /* ViewController.swift */; };
 		51EDC2E31F70F7BE00303C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC2E21F70F7BE00303C77 /* Assets.xcassets */; };
 		51EDC30A1F70F91E00303C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EDC3091F70F91E00303C77 /* Main.storyboard */; };
 		51EDC30E1F70FBCB00303C77 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */; };
@@ -46,7 +45,7 @@
 		518FF3AB1F8CC85200212741 /* SelectParamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectParamsViewController.swift; sourceTree = "<group>"; };
 		518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		518FF3AF1F8D61A000212741 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
+		519D71AD1F963449000FF75A /* EditParamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditParamCell.swift; sourceTree = "<group>"; };
 		51B38B9B1FCEBC38002AC713 /* SavedParamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedParamsTableViewController.swift; sourceTree = "<group>"; };
 		51C9D1971F74207200541580 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		51D91C201FA6519D00405FB1 /* MAnusjakBakalarka-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAnusjakBakalarka-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -54,7 +53,6 @@
 		51E9A97C1FB308910085310F /* OpenModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenModelsViewController.swift; sourceTree = "<group>"; };
 		51EDC2D81F70F7BE00303C77 /* MAnusjakBakalarka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAnusjakBakalarka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EDC2DB1F70F7BE00303C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51EDC2DD1F70F7BE00303C77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51EDC2E21F70F7BE00303C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51EDC2E71F70F7BE00303C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EDC3091F70F91E00303C77 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				518FF3AD1F8CEAAA00212741 /* TableViewCell.swift */,
-				519D71AD1F963449000FF75A /* SimulationTableViewCell.swift */,
+				519D71AD1F963449000FF75A /* EditParamCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -201,7 +199,6 @@
 			children = (
 				51EDC30D1F70FBCB00303C77 /* BaseViewController.swift */,
 				511617D71F828D050036B386 /* SpinnerAlertViewController.swift */,
-				51EDC2DD1F70F7BE00303C77 /* ViewController.swift */,
 			);
 			name = Helppers;
 			sourceTree = "<group>";
@@ -352,11 +349,10 @@
 				51B38B9C1FCEBC38002AC713 /* SavedParamsTableViewController.swift in Sources */,
 				51EE20331FA376F300A20C07 /* EditParamsViewController.swift in Sources */,
 				51EE202F1FA3716200A20C07 /* EditParamsTableView.swift in Sources */,
-				519D71AE1F963449000FF75A /* SimulationTableViewCell.swift in Sources */,
+				519D71AE1F963449000FF75A /* EditParamCell.swift in Sources */,
 				51519BB11F73D6EA009589FA /* Path.swift in Sources */,
 				518FF3A81F8B9A4100212741 /* StartSimulationViewController.swift in Sources */,
 				51E9A97D1FB308910085310F /* OpenModelsViewController.swift in Sources */,
-				51EDC2DE1F70F7BE00303C77 /* ViewController.swift in Sources */,
 				51EDC3101F70FEB000303C77 /* StartViewController.swift in Sources */,
 				51EDC2DC1F70F7BE00303C77 /* AppDelegate.swift in Sources */,
 				518FF3AE1F8CEAAA00212741 /* TableViewCell.swift in Sources */,

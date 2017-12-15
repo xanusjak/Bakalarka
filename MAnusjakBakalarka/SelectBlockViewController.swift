@@ -38,7 +38,6 @@ class SelectBlockViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         blocks = Array(modelDict.keys).sorted(by: <)
     }
     
@@ -54,7 +53,6 @@ class SelectBlockViewController: BaseViewController {
     }
     
     override func setupConstraints() {
-        
         tableView.autoPinEdgesToSuperviewEdges()
     }
 }

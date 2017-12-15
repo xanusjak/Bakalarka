@@ -154,6 +154,16 @@ class MatlabService {
         }
         return graphData
     }
+    
+    /// Get value for selected param
+    func getParamValue(modelName: String, blockName: String, paramName: String) {
+        print("get value for: " + modelName + " " + blockName + " " + paramName)
+        var url = Path.ip + Path.getParamValueModelName + modelName + Path.paramValueBlockName + blockName + Path.paramValueParamName + paramName
+        url = url.replacingOccurrences(of: " ", with: "%20")
+        
+        let result = callService(urlString: url)
+        print(result)
+    }
 }
 
 extension MatlabService {

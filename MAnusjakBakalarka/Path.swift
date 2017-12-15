@@ -28,8 +28,11 @@ struct Path {
     static let getModelInfo = "simulink/getModelInfo?modelName="
     static let isModelOpened = "simulink/isModelOpened?modelName="
     
-    static let setParamValue = "simulink/setParamValue"
-    static let getParamValue = "simulink/getParamValue"
+    static let setParamValue = "simulink/setParamValue??modelName="
+    static let getParamValueModelName = "simulink/getParamValue?modelName="
+    static let paramValueBlockName = "&blockName="
+    static let paramValueParamName = "&paramName="
+    //simulink/getParamValue?modelName=vrmaglev&blockName=Constant&paramName=VectorParams1D
 
     static let startSimulation = "simulink/startSimulation?modelName="
     static let stopSimulation = "simulink/stopSimulation?modelName="

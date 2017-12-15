@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class StartViewController: BaseViewController {
     
@@ -33,7 +34,7 @@ class StartViewController: BaseViewController {
     
     fileprivate let showOpenModelsButton = MAButton(title: "Show open models", color: .customBlueColor(), target: self, action: #selector(openModelsVC))
     
-    fileprivate let uploadButton = MAButton(title: "TODO:// Upload", color: .customBlueColor(), target: self, action: #selector(stopMatlabAdapter))
+    fileprivate let uploadButton = MAButton(title: "Upload model", color: .customBlueColor(), target: self, action: #selector(uploadModelFromCloud))
     
     fileprivate let startMatlabButton = MAButton(title: "Start Matlab", color: .customGreenColor(), target: self, action: #selector(startMatlabAdapter))
 
@@ -68,7 +69,7 @@ class StartViewController: BaseViewController {
             modelsList = MatlabService.sharedClient.getModels().sorted(by: <)
             
             startMatlabButton.isHidden = true
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "STOP", style: .done, target: self, action: #selector(stopMatlabAdapter))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Stop", style: .done, target: self, action: #selector(stopMatlabAdapter))
             self.navigationItem.rightBarButtonItem?.tintColor = .red
             
             self.navigationItem.leftBarButtonItem = nil
@@ -119,12 +120,6 @@ class StartViewController: BaseViewController {
 extension StartViewController {
     
     @objc func openSettings() {
-//        if MatlabService.sharedClient.isMatlabRuning() {
-//            let alert = UIAlertController(title: "Stop Matlab", message: "To change settings.", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//        else {
             self.navigationController?.pushViewController(SettingsViewController(haveConnection: true), animated: true)
     }
     
@@ -210,4 +205,46 @@ extension StartViewController {
             }
         }
     }
+    
+    @objc func uploadModelFromCloud() {
+        let documentPickerController = UIDocumentPickerViewController(documentTypes: [String(kUTTypePDF), String(kUTTypeImage), String(kUTTypeMovie), String(kUTTypeVideo), String(kUTTypePlainText), String(kUTTypeMP3)], in: .import)
+        documentPickerController.delegate = self
+        present(documentPickerController, animated: true, completion: nil)
+    }
+    
+//    func load_image(image_url:URL, view:UIImageView) {
+//
+//        let image_from_url_request: URLRequest = URLRequest(url: image_url as URL)
+//
+//        NSURLConnection.sendAsynchronousRequest(
+//            image_from_url_request as URLRequest, queue: OperationQueue.main,
+//            completionHandler: {(response: URLResponse!,
+//                data: Data!,
+//                error: Error!) -> Void in
+//
+//                if error == nil && data != nil {
+//                    view.image = UIImage(data: data)
+//                }
+//
+//        })
+//
+//    }
 }
+
+extension StartViewController: UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+        
+        //TODO: download from iCloud
+        print("\n\n \(url) \n\n")
+        
+//        let imageView = UIImageView()
+//        self.load_image(image_url: url, view: imageView)
+//        self.view.addSubview(imageView)
+//        imageView.autoPinEdgesToSuperviewEdges()
+    }
+}
+
+
+
+
+

@@ -95,7 +95,6 @@ class SettingsViewController: BaseViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-
     }
 }
 

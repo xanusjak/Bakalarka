@@ -51,7 +51,7 @@ class EditParamsTableView: UITableView {
         self.backgroundColor = UIColor.clear
         self.showsVerticalScrollIndicator = false
         self.separatorStyle = .singleLine
-        self.register(SimulationTableViewCell.self, forCellReuseIdentifier: "simulationCell")
+        self.register(EditParamCell.self, forCellReuseIdentifier: "simulationCell")
     }
     
     func loadTableData() {
@@ -99,18 +99,18 @@ extension EditParamsTableView: UITableViewDataSource {
         let blockName = blocks[indexPath.section]
         
         paramsInBlock = modelSelectedParams[blockName] as! [String]
-        let paramName = paramsInBlock[indexPath.row]
+        let paramDisplayName = paramsInBlock[indexPath.row]
         var paramInfo: [String:Any]!
         
         if let block = modelDict[blockName] as? [Dictionary<String, Any>] {
             for param in block {
-                if param["displayName"] as? String == paramName {
+                if param["displayName"] as? String == paramDisplayName {
                     paramInfo = param
                 }
             }
         }
         
-        let cell = SimulationTableViewCell(text: paramName, paramInfo: paramInfo, reuseIdentifier: "simulationCell", viewController: controller)
+        let cell = EditParamCell(modelName: modelName, blockName: blockName, paramInfo: paramInfo, reuseIdentifier: "simulationCell", viewController: controller)
         cell.selectionStyle = .none
         
         return cell
